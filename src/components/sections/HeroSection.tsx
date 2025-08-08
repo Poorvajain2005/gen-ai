@@ -40,7 +40,15 @@ export function HeroSection() {
             <Button variant="hero" size="lg" asChild>
               <Link to="/signup">Start Free Trial</Link>
             </Button>
-            <Button variant="ghost" size="lg" className="group">
+            <Button 
+              variant="ghost" 
+              size="lg" 
+              className="group"
+              onClick={() => {
+                // Navigate to demo page
+                window.location.href = '/demo';
+              }}
+            >
               <Play className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
               Watch Demo
             </Button>

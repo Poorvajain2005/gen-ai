@@ -197,10 +197,23 @@ export function InfluencerTable() {
               </div>
               
               <div className="flex items-center gap-2">
-                <Button variant="ghost" size="sm">
+                <Button 
+                  variant="ghost" 
+                  size="sm"
+                  onClick={() => {
+                    window.open(`https://instagram.com/${influencer.username.replace('@', '')}`, '_blank');
+                  }}
+                >
                   <ExternalLink className="h-4 w-4" />
                 </Button>
-                <Button variant="outline" size="sm">
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  onClick={() => {
+                    console.log(`Contacting ${influencer.name}...`);
+                    alert(`Opening contact form for ${influencer.name}`);
+                  }}
+                >
                   Contact
                 </Button>
               </div>

@@ -18,7 +18,16 @@ export default function Dashboard() {
               <h1 className="text-2xl font-bold text-foreground">Dashboard Overview</h1>
               <p className="text-muted-foreground">Welcome back! Here's what's happening with your campaigns.</p>
             </div>
-            <Button variant="hero" className="gap-2">
+            <Button 
+              variant="hero" 
+              className="gap-2"
+              onClick={() => {
+                // Navigate to campaign creation or open modal
+                console.log('Opening new campaign creation...');
+                // In a real app, this would open a modal or navigate to /campaigns/new
+                alert('Campaign creation feature coming soon!');
+              }}
+            >
               <Plus className="h-4 w-4" />
               New Campaign
             </Button>
