@@ -14,6 +14,9 @@ import Demo from "./pages/Demo";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import NotFound from "./pages/NotFound";
+import ResponsiveTabsDemo from "./pages/ResponsiveTabsDemo";
+import { ModernHeader } from "@/components/layout/ModernHeader";
+import { ModernHero } from "@/components/sections/ModernHero";
 
 const queryClient = new QueryClient();
 
@@ -24,8 +27,9 @@ const App = () => (
         <TooltipProvider>
           <Toaster />
           <Sonner />
+          <ModernHeader />
           <Routes>
-            <Route path="/" element={<Index />} />
+            <Route path="/" element={<><ModernHero /><Index /></>} />
             <Route path="/dashboard" element={
               <ProtectedRoute>
                 <Dashboard />
@@ -42,6 +46,7 @@ const App = () => (
             <Route path="/demo" element={<Demo />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/tabs-demo" element={<ResponsiveTabsDemo />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
