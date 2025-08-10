@@ -15,8 +15,20 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import NotFound from "./pages/NotFound";
 import ResponsiveTabsDemo from "./pages/ResponsiveTabsDemo";
+import Discovery from "./pages/Discovery";
+import Campaigns from "./pages/Campaigns";
+import Analytics from "./pages/Analytics";
+import Payments from "./pages/Payments";
+import Ecommerce from "./pages/Ecommerce";
+import Saas from "./pages/Saas";
+import Agencies from "./pages/Agencies";
+import Enterprise from "./pages/Enterprise";
+import Blog from "./pages/Blog";
+import CaseStudies from "./pages/CaseStudies";
+import Webinars from "./pages/Webinars";
+import Help from "./pages/Help";
+import { Layout } from "@/components/layout/Layout";
 import { ModernHeader } from "@/components/layout/ModernHeader";
-import { ModernHero } from "@/components/sections/ModernHero";
 
 const queryClient = new QueryClient();
 
@@ -28,28 +40,42 @@ const App = () => (
           <Toaster />
           <Sonner />
           <ModernHeader />
-          <Routes>
-            <Route path="/" element={<><ModernHero /><Index /></>} />
-            <Route path="/dashboard" element={
-              <ProtectedRoute>
-                <Dashboard />
-              </ProtectedRoute>
-            } />
-            <Route path="/dashboard/*" element={
-              <ProtectedRoute>
-                <Dashboard />
-              </ProtectedRoute>
-            } />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/features" element={<Features />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/demo" element={<Demo />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/tabs-demo" element={<ResponsiveTabsDemo />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/dashboard" element={
+                <ProtectedRoute>
+                  <Dashboard />
+                </ProtectedRoute>
+              } />
+              <Route path="/dashboard/*" element={
+                <ProtectedRoute>
+                  <Dashboard />
+                </ProtectedRoute>
+              } />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/features" element={<Features />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/demo" element={<Demo />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/tabs-demo" element={<ResponsiveTabsDemo />} />
+              <Route path="/discovery" element={<Discovery />} />
+              <Route path="/campaigns" element={<Campaigns />} />
+              <Route path="/analytics" element={<Analytics />} />
+              <Route path="/payments" element={<Payments />} />
+              <Route path="/ecommerce" element={<Ecommerce />} />
+              <Route path="/saas" element={<Saas />} />
+              <Route path="/agencies" element={<Agencies />} />
+              <Route path="/enterprise" element={<Enterprise />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/webinars" element={<Webinars />} />
+              <Route path="/help" element={<Help />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Layout>
         </TooltipProvider>
       </AuthProvider>
     </BrowserRouter>
