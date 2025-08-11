@@ -27,6 +27,9 @@ import Blog from "./pages/Blog";
 import CaseStudies from "./pages/CaseStudies";
 import Webinars from "./pages/Webinars";
 import Help from "./pages/Help";
+import Influencers from "./pages/Influencers";
+import Settings from "./pages/Settings";
+import Api from "./pages/Api";
 import { Layout } from "@/components/layout/Layout";
 import { ModernHeader } from "@/components/layout/ModernHeader";
 
@@ -43,16 +46,22 @@ const App = () => (
           <Layout>
             <Routes>
               <Route path="/" element={<Index />} />
-              <Route path="/dashboard" element={
-                <ProtectedRoute>
-                  <Dashboard />
-                </ProtectedRoute>
-              } />
-              <Route path="/dashboard/*" element={
-                <ProtectedRoute>
-                  <Dashboard />
-                </ProtectedRoute>
-              } />
+              <Route
+                path="/dashboard"
+                element={
+                  <ProtectedRoute>
+                    <Dashboard />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/dashboard/*"
+                element={
+                  <ProtectedRoute>
+                    <Dashboard />
+                  </ProtectedRoute>
+                }
+              />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/features" element={<Features />} />
               <Route path="/about" element={<About />} />
@@ -72,6 +81,23 @@ const App = () => (
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/webinars" element={<Webinars />} />
               <Route path="/help" element={<Help />} />
+              <Route path="/api" element={<Api />} />
+              <Route
+                path="/influencers"
+                element={
+                  <ProtectedRoute>
+                    <Influencers />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/settings"
+                element={
+                  <ProtectedRoute>
+                    <Settings />
+                  </ProtectedRoute>
+                }
+              />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
