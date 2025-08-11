@@ -14,7 +14,7 @@ export function ContactSection() {
             Ready to transform your influencer marketing? Contact us today.
           </p>
         </div>
-        
+
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <Card className="hover-lift">
@@ -26,8 +26,11 @@ export function ContactSection() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-lg">
-                  <a href="tel:+917869712770" className="text-primary hover:underline">
-                    +91 78697 12770
+                  <a
+                    href="tel:+910000000000"
+                    className="text-primary hover:underline"
+                  >
+                    +91 00000 00000
                   </a>
                 </CardDescription>
                 <p className="mt-2 text-sm text-muted-foreground">
@@ -35,7 +38,7 @@ export function ContactSection() {
                 </p>
               </CardContent>
             </Card>
-            
+
             <Card className="hover-lift">
               <CardHeader>
                 <div className="flex items-center gap-x-3">
@@ -45,7 +48,10 @@ export function ContactSection() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-lg">
-                  <a href="mailto:contact@gen-goodwill.ai" className="text-primary hover:underline">
+                  <a
+                    href="mailto:contact@gen-goodwill.ai"
+                    className="text-primary hover:underline"
+                  >
                     contact@gen-goodwill.ai
                   </a>
                 </CardDescription>
@@ -54,7 +60,7 @@ export function ContactSection() {
                 </p>
               </CardContent>
             </Card>
-            
+
             <Card className="hover-lift">
               <CardHeader>
                 <div className="flex items-center gap-x-3">

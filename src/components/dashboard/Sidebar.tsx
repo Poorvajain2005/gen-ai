@@ -16,12 +16,12 @@ import { useState } from "react";
 
 const navigation = [
   { name: "Overview", href: "/dashboard", icon: BarChart3 },
-  { name: "Discover", href: "/dashboard/discover", icon: Search },
-  { name: "Campaigns", href: "/dashboard/campaigns", icon: MessageSquare },
-  { name: "Influencers", href: "/dashboard/influencers", icon: Users },
-  { name: "Payments", href: "/dashboard/payments", icon: CreditCard },
-  { name: "Settings", href: "/dashboard/settings", icon: Settings },
-  { name: "Help", href: "/dashboard/help", icon: HelpCircle },
+  { name: "Discover", href: "/discovery", icon: Search },
+  { name: "Campaigns", href: "/campaigns", icon: MessageSquare },
+  { name: "Influencers", href: "/influencers", icon: Users },
+  { name: "Payments", href: "/payments", icon: CreditCard },
+  { name: "Settings", href: "/settings", icon: Settings },
+  { name: "Help", href: "/help", icon: HelpCircle },
 ];
 
 export function Sidebar() {
@@ -36,11 +36,9 @@ export function Sidebar() {
       {/* Header */}
       <div className="flex h-16 items-center border-b border-border px-4">
         {!collapsed && (
-          <Link to="/" className="flex items-center">
-            <span className="text-lg font-bold bg-gradient-primary bg-clip-text text-transparent">
-              Gen Goodwill.ai
-            </span>
-          </Link>
+          <>
+            {/* Removed Gen Goodwill.ai text as per request */}
+          </>
         )}
         <Button
           variant="ghost"
