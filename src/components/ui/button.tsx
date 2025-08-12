@@ -1,27 +1,35 @@
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
-import { cva, type VariantProps } from "class-variance-authority"
-
-import { cn } from "@/lib/utils"
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-semibold ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary-dark shadow-purple hover:shadow-purple-lg hover:scale-105",
+        default:
+          "bg-primary text-primary-foreground hover:bg-primary-dark shadow-purple hover:shadow-purple-lg hover:scale-105",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-md hover:shadow-lg",
         outline:
           "border-2 border-primary/20 bg-background text-primary hover:bg-primary hover:text-primary-foreground hover:border-primary shadow-md hover:shadow-purple-lg hover:scale-105",
+        "purple-outline":
+          "border-2 border-purple-600 bg-white text-purple-600 hover:bg-purple-600 hover:text-white shadow-md hover:shadow-purple-lg hover:scale-105",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary-dark shadow-md hover:shadow-lg hover:scale-105",
         ghost: "hover:bg-accent hover:text-accent-foreground hover:scale-105",
         link: "text-primary underline-offset-4 hover:underline hover:text-primary-dark",
         hero: "bg-gradient-primary text-primary-foreground hover:scale-105 shadow-glow hover:shadow-xl font-bold tracking-wide animate-glow",
-        premium: "bg-gradient-hero text-primary-foreground hover:scale-105 shadow-purple-xl hover:shadow-glow font-bold tracking-wide border border-primary-light/30",
-        glass: "bg-background/80 backdrop-blur-sm border border-border-light text-foreground hover:bg-background hover:scale-105 shadow-md hover:shadow-lg",
-        success: "bg-success text-success-foreground hover:bg-success/90 shadow-md hover:shadow-lg hover:scale-105",
+        premium:
+          "bg-gradient-hero text-primary-foreground hover:scale-105 shadow-purple-xl hover:shadow-glow font-bold tracking-wide border border-primary-light/30",
+        glass:
+          "bg-background/80 backdrop-blur-sm border border-border-light text-foreground hover:bg-background hover:scale-105 shadow-md hover:shadow-lg",
+        success:
+          "bg-success text-success-foreground hover:bg-success/90 shadow-md hover:shadow-lg hover:scale-105",
+        // ✅ new variant for Start Free Trial
+        noGlow:
+          "border-2 border-primary/20 bg-background text-primary hover:bg-primary hover:text-primary-foreground hover:border-primary shadow-md hover:shadow-lg hover:scale-105",
       },
       size: {
         default: "h-11 px-6 py-3",
@@ -36,7 +44,7 @@ const buttonVariants = cva(
       size: "default",
     },
   }
-)
+);
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,

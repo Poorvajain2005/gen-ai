@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -12,6 +11,7 @@ const tabs = [
   { name: "API", href: "/api" },
   { name: "Resources", href: "/resources" },
   { name: "Pricing", href: "/pricing" },
+  { name: "Start Free Trial", href: "/signup", variant: "secondary" }, // ✅ changed from ghost/hero to secondary
 ];
 
 export function Header() {
@@ -19,21 +19,10 @@ export function Header() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Determine the active tab based on current path
+  // Determine active tab
   const activeTab = tabs.findIndex((tab) =>
     location.pathname.startsWith(tab.href)
   );
-
-  const [tabValue, setTabValue] = useState(
-    activeTab >= 0 ? String(activeTab) : "0"
-  );
-
-  useEffect(() => {
-    const newActiveTab = tabs.findIndex((tab) =>
-      location.pathname.startsWith(tab.href)
-    );
-    setTabValue(newActiveTab >= 0 ? String(newActiveTab) : "0");
-  }, [location.pathname]);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -68,9 +57,8 @@ export function Header() {
         {/* Centered Desktop navigation */}
         <div className="hidden lg:flex items-center">
           <Tabs
-            value={tabValue}
+            value={String(activeTab >= 0 ? activeTab : 0)}
             onValueChange={(value) => {
-              setTabValue(value);
               const tab = tabs[parseInt(value, 10)];
               if (tab) {
                 navigate(tab.href);
@@ -80,18 +68,18 @@ export function Header() {
           >
             <TabsList className="rounded-full p-1 text-gray-400 bg-transparent">
               {tabs.map((tab, index) => (
-                <TabsTrigger
-                  key={tab.name}
-                  value={String(index)}
-                  className={cn(
-                    "rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200",
-                    tabValue === String(index)
-                      ? "bg-white text-black shadow-lg"
-                      : "text-gray-700 hover:bg-gray-900 hover:text-white"
-                  )}
-                  asChild
-                >
-                  <button type="button">{tab.name}</button>
+                <TabsTrigger key={tab.name} value={String(index)} asChild>
+                  <Button
+                    variant={tab.variant || "ghost"}
+                    className={cn(
+                      "rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200",
+                      activeTab === index
+                        ? "bg-white text-black shadow-lg"
+                        : "text-gray-700 hover:bg-gray-900 hover:text-white"
+                    )}
+                  >
+                    {tab.name}
+                  </Button>
                 </TabsTrigger>
               ))}
             </TabsList>
@@ -106,9 +94,6 @@ export function Header() {
           <Button variant="outline" asChild>
             <Link to="/demo">Get a demo</Link>
           </Button>
-          <Button variant="hero" asChild>
-            <Link to="/signup">Try for Free</Link>
-          </Button>
         </div>
       </nav>
 
@@ -116,7 +101,7 @@ export function Header() {
       {mobileMenuOpen && (
         <div className="lg:hidden">
           <div className="space-y-2 px-6 pb-6 pt-2">
-            {tabs.map((tab, index) => (
+            {tabs.map((tab) => (
               <Link
                 key={tab.name}
                 to={tab.href}
@@ -138,8 +123,10 @@ export function Header() {
               <Button variant="outline" className="w-full" asChild>
                 <Link to="/demo">Get a demo</Link>
               </Button>
-              <Button variant="hero" className="w-full" asChild>
-                <Link to="/signup">Try for Free</Link>
+              <Button variant="outline" className="w-full" asChild>
+                {" "}
+                {/* ✅ same style as log in */}
+                <Link to="/signup">Start Free Trial</Link>
               </Button>
             </div>
           </div>

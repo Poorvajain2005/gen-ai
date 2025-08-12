@@ -30,6 +30,9 @@ import Help from "./pages/Help";
 import Influencers from "./pages/Influencers";
 import Settings from "./pages/Settings";
 import Api from "./pages/Api";
+import Inbox from "./pages/Inbox";
+import ShopifyIntegration from "./pages/ShopifyIntegration";
+import CampaignMonitoring from "./pages/CampaignMonitoring";
 import { Layout } from "@/components/layout/Layout";
 import { ModernHeader } from "@/components/layout/ModernHeader";
 
@@ -68,6 +71,7 @@ const App = () => (
               <Route path="/demo" element={<Demo />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/customers" element={<Customers />} />
               <Route path="/tabs-demo" element={<ResponsiveTabsDemo />} />
               <Route path="/discovery" element={<Discovery />} />
               <Route path="/campaigns" element={<Campaigns />} />
@@ -82,6 +86,17 @@ const App = () => (
               <Route path="/webinars" element={<Webinars />} />
               <Route path="/help" element={<Help />} />
               <Route path="/api" element={<Api />} />
+              <Route path="/updates" element={<Updates />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/our-data" element={<OurData />} />
+              <Route path="/helpdesk" element={<Helpdesk />} />
+              <Route path="/ask-question" element={<AskQuestion />} />
+              <Route path="/book-call" element={<BookCall />} />
+              <Route path="/academy" element={<Academy />} />
+              <Route path="/management" element={<Management />} />
+              <Route path="/inbox" element={<Inbox />} />
+              <Route path="/shopify-integration" element={<ShopifyIntegration />} />
+              <Route path="/campaign-monitoring" element={<CampaignMonitoring />} />
               <Route
                 path="/influencers"
                 element={
