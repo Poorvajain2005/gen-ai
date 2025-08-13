@@ -6,12 +6,12 @@ import { cn } from "@/lib/utils";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/responsive-tabs";
 
 const tabs = [
-  { name: "Product", href: "/product" },
-  { name: "Customers", href: "/customers" },
-  { name: "API", href: "/api" },
-  { name: "Resources", href: "/resources" },
-  { name: "Pricing", href: "/pricing" },
-  { name: "Start Free Trial", href: "/signup", variant: "secondary" }, // ✅ changed from ghost/hero to secondary
+  { name: "Product", href: "/product", variant: "ghost" },
+  { name: "Customers", href: "/customers", variant: "ghost" },
+  { name: "API", href: "/api", variant: "ghost" },
+  { name: "Resources", href: "/resources", variant: "ghost" },
+  { name: "Pricing", href: "/pricing", variant: "ghost" },
+  { name: "Start Free Trial", href: "/signup", variant: "ghost" }, // changed variant to ghost to remove glow
 ];
 
 export function Header() {
@@ -74,7 +74,9 @@ export function Header() {
                     className={cn(
                       "rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200",
                       activeTab === index
-                        ? "bg-white text-black shadow-lg"
+                        ? (tab.name === "Start Free Trial"
+                            ? "bg-white text-black shadow-none"
+                            : "bg-white text-black shadow-lg")
                         : "text-gray-700 hover:bg-gray-900 hover:text-white"
                     )}
                   >

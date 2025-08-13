@@ -77,7 +77,7 @@ export default function Pricing() {
   const [isYearly, setIsYearly] = useState(false);
 
   return (
-    <Layout>
+    <>
       <div className="bg-background py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Header */}
@@ -197,6 +197,6 @@ export default function Pricing() {
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   );
 }

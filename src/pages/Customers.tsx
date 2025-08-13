@@ -1,4 +1,3 @@
-import { Footer } from "@/components/layout/Footer";
 import { Layout } from "@/components/layout/Layout";
 import { Star, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -91,7 +90,7 @@ const successStories = [
 
 export default function Customers() {
   return (
-    <Layout>
+    <>
       <div className="bg-pink-50 py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-4xl font-bold mb-2">Trusted by Leading Brands</h1>
@@ -170,8 +169,6 @@ export default function Customers() {
           </Button>
         </div>
       </div>
-
-      <Footer />
-    </Layout>
+    </>
   );
 }

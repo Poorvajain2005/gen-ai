@@ -68,76 +68,10 @@ const Signup = () => {
         </p>
         <div className="relative flex space-x-4 bg-indigo-300 rounded-xl p-6 shadow-lg">
           <img
-            src="/assets/sample1.jpg"
-            alt="Sample 1"
-            className="rounded-lg shadow-lg w-24 h-32 object-cover"
+            src="/assets/login-marketing.jpg"
+            alt="Affiliate campaigns marketing"
+            className="rounded-lg shadow-lg w-full h-auto object-cover"
           />
-          <img
-            src="/assets/sample2.jpg"
-            alt="Sample 2"
-            className="rounded-lg shadow-lg w-24 h-32 object-cover"
-          />
-          <img
-            src="/assets/sample3.jpg"
-            alt="Sample 3"
-            className="rounded-lg shadow-lg w-24 h-32 object-cover"
-          />
-          {/* Overlay discount code */}
-          <div className="absolute top-4 left-20 bg-white rounded-md p-2 shadow-md text-indigo-900 font-semibold text-sm flex items-center space-x-2">
-            <img
-              src="/assets/shopify-logo.png"
-              alt="Shopify"
-              className="w-4 h-4"
-            />
-            <span>Discount code</span>
-            <span className="font-bold">EMMA20</span>
-          </div>
-          {/* Overlay stats */}
-          <div className="absolute bottom-4 left-4 bg-white rounded-md p-2 shadow-md text-indigo-900 text-sm space-y-1">
-            <div className="flex items-center space-x-1">
-              <svg
-                className="w-4 h-4 text-indigo-600"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path d="M6 2a1 1 0 00-1 1v14a1 1 0 001 1h8a1 1 0 001-1V7.414a1 1 0 00-.293-.707l-4.414-4.414A1 1 0 0010.586 2H6z" />
-              </svg>
-              <span>287</span>
-            </div>
-            <div className="flex items-center space-x-1">
-              <svg
-                className="w-4 h-4 text-indigo-600"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5z" />
-              </svg>
-              <span>154</span>
-            </div>
-            <div className="flex items-center space-x-1">
-              <svg
-                className="w-4 h-4 text-indigo-600"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path d="M3 3h14v14H3V3z" />
-              </svg>
-              <span>76.8k</span>
-            </div>
-          </div>
-          {/* Overlay total revenue */}
-          <div className="absolute bottom-4 right-4 bg-white rounded-md p-2 shadow-md text-indigo-900 font-semibold text-sm">
-            Total revenue
-            <div className="text-lg font-bold">$13,110.00</div>
-          </div>
-          {/* Shopify logo overlay */}
-          <div className="absolute top-20 right-4 bg-white rounded-md p-2 shadow-md">
-            <img
-              src="/assets/shopify-logo.png"
-              alt="Shopify"
-              className="w-12 h-6 object-contain"
-            />
-          </div>
         </div>
         <div className="flex space-x-6 mt-8 text-white font-bold text-lg">
           <span>Bolt</span>
