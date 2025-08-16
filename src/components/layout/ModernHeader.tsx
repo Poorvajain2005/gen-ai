@@ -129,11 +129,17 @@ export function ModernHeader() {
 
   // Conditionally render header only on landing page(s)
   // Also render on /pricing to highlight Pricing tab
+  // Exclude dashboard pages
   if (
     location.pathname !== "/" &&
     location.pathname !== "/modernlanding" &&
-    location.pathname !== "/pricing"
+    location.pathname !== "/pricing" &&
+    !location.pathname.startsWith("/dashboard")
   ) {
+    return null;
+  }
+
+  if (location.pathname.startsWith("/dashboard")) {
     return null;
   }
 
@@ -195,8 +201,8 @@ export function ModernHeader() {
                           location.pathname === item.href ||
                             (item.name === "Pricing" &&
                               location.pathname === "/pricing")
-                            ? "text-blue-600 bg-blue-50"
-                            : "text-gray-700 hover:text-blue-600"
+                            ? "text-green-600 bg-green-50"
+                            : "text-gray-700 hover:text-green-600"
                         )}
                       >
                         {item.name}
@@ -217,7 +223,11 @@ export function ModernHeader() {
               variant={button.variant}
               size="sm"
               asChild
-              className="transition-all duration-200 px-4"
+              className={cn(
+                "transition-all duration-200 px-4",
+                button.variant === "default" && "bg-green-600 hover:bg-green-700",
+                button.variant === "outline" && "border-green-600 text-green-600 hover:bg-green-600 hover:text-white"
+              )}
             >
               <Link to={button.href}>{button.name}</Link>
             </Button>
@@ -252,7 +262,7 @@ export function ModernHeader() {
                 className={cn(
                   "block rounded-lg px-4 py-3 text-base font-medium transition-colors",
                   location.pathname === item.href
-                    ? "bg-blue-50 text-blue-600"
+                    ? "bg-green-50 text-green-600"
                     : "text-gray-700 hover:bg-gray-50"
                 )}
                 onClick={() => setMobileMenuOpen(false)}
@@ -283,14 +293,14 @@ export function ModernHeader() {
               <div className="flex flex-col space-y-2 text-sm text-gray-600">
                 <a
                   href="tel:+910000000000"
-                  className="flex items-center space-x-2 hover:text-blue-600 py-2"
+                  className="flex items-center space-x-2 hover:text-green-600 py-2"
                 >
                   <Phone className="h-4 w-4" />
                   <span>+91 78697 12770</span>
                 </a>
                 <a
                   href="mailto:contact@gen-goodwill.ai"
-                  className="flex items-center space-x-2 hover:text-blue-600 py-2"
+                  className="flex items-center space-x-2 hover:text-green-600 py-2"
                 >
                   <Mail className="h-4 w-4" />
                   <span>contact@gen-goodwill.ai</span>

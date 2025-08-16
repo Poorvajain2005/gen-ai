@@ -35,7 +35,7 @@ export function Logo({ className, size = "md", showText = true }: LogoProps) {
       {/* Optional Text */}
       {showText && (
         <div className={cn("font-bold", textSizes[size])}>
-          <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-emerald-600 to-slate-600 bg-clip-text text-transparent">
             Gen Goodwill.ai
           </span>
         </div>

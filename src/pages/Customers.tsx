@@ -91,13 +91,13 @@ export default function Customers() {
   return (
     <main className="min-h-screen bg-gray-50">
       <Header />
-      <div className="bg-pink-50 py-16">
+      <div className="bg-slate-50 py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-4xl font-bold mb-2">Trusted by Leading Brands</h1>
           <p className="text-gray-600 mb-8">
             See how top brands are using Gen Goodwill.ai to scale their influencer marketing and drive real results.
           </p>
-          <div className="flex justify-center space-x-12 text-pink-400 font-semibold text-xl mb-12">
+          <div className="flex justify-center space-x-12 text-emerald-600 font-semibold text-xl mb-12">
             {stats.map((stat) => (
               <div key={stat.label} className="flex flex-col items-center">
                 <span className="text-3xl font-extrabold">{stat.value}</span>
@@ -123,7 +123,7 @@ export default function Customers() {
                   <Star className="text-yellow-400 w-5 h-5" />
                 </div>
                 <p className="mb-4">{quote}</p>
-                <div className="bg-pink-100 text-pink-600 rounded-md px-3 py-1 mb-4 text-sm font-semibold">{highlight}</div>
+                <div className="bg-emerald-100 text-emerald-600 rounded-md px-3 py-1 mb-4 text-sm font-semibold">{highlight}</div>
                 <div className="text-sm font-semibold">{name}</div>
                 <div className="text-xs text-gray-500">{title}</div>
               </div>
@@ -147,7 +147,7 @@ export default function Customers() {
               </div>
               <div className="flex space-x-4">
                 {results.map((result, i) => (
-                  <div key={i} className="bg-pink-100 text-pink-600 rounded-md px-4 py-2 text-sm font-semibold">
+                  <div key={i} className="bg-emerald-100 text-emerald-600 rounded-md px-4 py-2 text-sm font-semibold">
                     {result}
                   </div>
                 ))}
@@ -157,14 +157,14 @@ export default function Customers() {
         </div>
       </div>
 
-      <div className="bg-pink-600 text-white py-16 text-center">
+      <div className="bg-gradient-to-r from-slate-700 to-emerald-700 text-white py-16 text-center">
         <h2 className="text-3xl font-bold mb-4">Join Thousands of Successful Brands</h2>
         <p className="mb-8">Start your influencer marketing journey with Gen Goodwill.ai today</p>
         <div className="space-x-4">
-          <Button variant="outline" className="text-pink-600 border-white hover:bg-white hover:text-pink-600">
+          <Button variant="outline" className="text-white border-white hover:bg-white hover:text-emerald-600">
             Start Free Trial
           </Button>
-          <Button variant="outline" className="border-white text-pink-600 hover:bg-white hover:text-pink-600">
+          <Button variant="outline" className="border-white text-white hover:bg-white hover:text-emerald-600">
             Schedule Demo
           </Button>
         </div>
