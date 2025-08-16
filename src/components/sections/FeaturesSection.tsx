@@ -116,23 +116,23 @@ export function FeaturesSection() {
   const [hoveredFeature, setHoveredFeature] = useState<number | null>(null);
 
   return (
-    <section className="relative py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 overflow-hidden">
+    <section className="relative py-24 bg-gradient-to-br from-gray-50 via-white to-green-50 overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-100/20 via-transparent to-purple-100/20" />
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-200/10 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-purple-200/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-green-100/20 via-transparent to-green-100/20" />
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-green-200/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-green-200/10 rounded-full blur-3xl animate-pulse" />
       
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-100 to-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Sparkles className="h-4 w-4" />
             <span>Powerful Features</span>
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Everything you need to
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> scale your influencer marketing</span>
+            <span className="bg-gradient-to-r from-green-600 to-green-600 bg-clip-text text-transparent"> scale your influencer marketing</span>
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -217,8 +217,8 @@ export function FeaturesSection() {
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="flex items-center justify-center space-x-2 mb-2">
-                  <stat.icon className="h-6 w-6 text-blue-600 group-hover:text-purple-600 transition-colors duration-300" />
-                  <div className="text-3xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                  <stat.icon className="h-6 w-6 text-green-600 group-hover:text-green-600 transition-colors duration-300" />
+                  <div className="text-3xl font-bold text-gray-900 group-hover:text-green-600 transition-colors duration-300">
                     {stat.value}
                   </div>
                 </div>
@@ -230,7 +230,7 @@ export function FeaturesSection() {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg" asChild>
+          <Button size="lg" className="bg-gradient-to-r from-green-600 to-green-600 hover:from-green-700 hover:to-green-700 text-white px-8 py-4 text-lg" asChild>
             <Link to="/signup">
               Start Your Free Trial
               <ArrowRight className="ml-2 h-5 w-5" />

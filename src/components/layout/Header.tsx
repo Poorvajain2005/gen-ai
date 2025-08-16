@@ -11,7 +11,7 @@ const tabs = [
   { name: "API", href: "/api", variant: "ghost" },
   { name: "Resources", href: "/resources", variant: "ghost" },
   { name: "Pricing", href: "/pricing", variant: "ghost" },
-  { name: "Start Free Trial", href: "/signup", variant: "ghost" }, // changed variant to ghost to remove glow
+  { name: "Start Free Trial", href: "/signup", variant: "ghost" },
 ];
 
 export function Header() {
@@ -25,7 +25,7 @@ export function Header() {
   );
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-green-800 bg-green-900 backdrop-blur supports-[backdrop-filter]:bg-green-900/90">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-center gap-x-12 p-6 lg:px-8"
         aria-label="Global"
@@ -33,7 +33,7 @@ export function Header() {
         {/* Logo */}
         <div className="flex items-center">
           <Link to="/" className="-m-1.5 p-1.5">
-            <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+            <span className="text-2xl font-bold text-white">
               Gen Goodwill.ai
             </span>
           </Link>
@@ -44,6 +44,7 @@ export function Header() {
           <Button
             variant="ghost"
             size="icon"
+            className="text-white hover:bg-green-800"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? (
@@ -66,7 +67,7 @@ export function Header() {
             }}
             className="rounded-full px-1 py-1"
           >
-            <TabsList className="rounded-full p-1 text-gray-400 bg-transparent">
+            <TabsList className="rounded-full p-1 text-gray-300 bg-transparent">
               {tabs.map((tab, index) => (
                 <TabsTrigger key={tab.name} value={String(index)} asChild>
                   <Button
@@ -74,10 +75,8 @@ export function Header() {
                     className={cn(
                       "rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200",
                       activeTab === index
-                        ? (tab.name === "Start Free Trial"
-                            ? "bg-white text-black shadow-none"
-                            : "bg-white text-black shadow-lg")
-                        : "text-gray-700 hover:bg-gray-900 hover:text-white"
+                        ? "bg-green-700 text-white shadow-lg"
+                        : "text-gray-200 hover:bg-green-800 hover:text-white"
                     )}
                   >
                     {tab.name}
@@ -90,10 +89,25 @@ export function Header() {
 
         {/* Desktop CTA buttons */}
         <div className="hidden lg:flex items-center lg:gap-x-4">
-          <Button variant="ghost" asChild>
+          <Button
+            variant="ghost"
+            className="text-white hover:bg-green-800"
+            asChild
+          >
             <Link to="/login">Log in</Link>
           </Button>
-          <Button variant="outline" asChild>
+          <Button
+            variant="ghost"
+            className="text-white hover:bg-green-800"
+            asChild
+          >
+            <Link to="/signup">Start Free Trial</Link>
+          </Button>
+          <Button
+            variant="outline"
+            className="border-white text-white hover:bg-green-800"
+            asChild
+          >
             <Link to="/demo">Get a demo</Link>
           </Button>
         </div>
@@ -101,7 +115,7 @@ export function Header() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden">
+        <div className="lg:hidden bg-green-900">
           <div className="space-y-2 px-6 pb-6 pt-2">
             {tabs.map((tab) => (
               <Link
@@ -110,8 +124,8 @@ export function Header() {
                 className={cn(
                   "block rounded-lg px-3 py-2 text-base font-semibold leading-7 transition-colors",
                   location.pathname.startsWith(tab.href)
-                    ? "bg-accent text-accent-foreground"
-                    : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                    ? "bg-green-700 text-white"
+                    : "text-gray-200 hover:bg-green-800 hover:text-white"
                 )}
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -119,16 +133,26 @@ export function Header() {
               </Link>
             ))}
             <div className="mt-6 space-y-3">
-              <Button variant="ghost" className="w-full" asChild>
+              <Button
+                variant="ghost"
+                className="w-full text-white hover:bg-green-800"
+                asChild
+              >
                 <Link to="/login">Log in</Link>
               </Button>
-              <Button variant="outline" className="w-full" asChild>
-                <Link to="/demo">Get a demo</Link>
-              </Button>
-              <Button variant="outline" className="w-full" asChild>
-                {" "}
-                {/* ✅ same style as log in */}
+              <Button
+                variant="ghost"
+                className="w-full text-white hover:bg-green-800"
+                asChild
+              >
                 <Link to="/signup">Start Free Trial</Link>
+              </Button>
+              <Button
+                variant="outline"
+                className="w-full border-white text-white hover:bg-green-800"
+                asChild
+              >
+                <Link to="/demo">Get a demo</Link>
               </Button>
             </div>
           </div>

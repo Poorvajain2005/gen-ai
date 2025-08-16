@@ -1,15 +1,19 @@
-import React from 'react';
-import { Layout } from '@/components/layout/Layout';
+import React from "react";
+import { Layout } from "@/components/layout/Layout";
 
 const CampaignMonitoring = () => {
   return (
     <Layout>
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">Campaign Monitoring</h1>
+        <h1 className="text-3xl font-bold mb-6 text-green-700">
+          Campaign Monitoring
+        </h1>
+
+        {/* Top Stats */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="bg-white p-6 rounded-lg shadow">
             <h3 className="text-lg font-semibold mb-2">Active Campaigns</h3>
-            <p className="text-3xl font-bold text-blue-600">12</p>
+            <p className="text-3xl font-bold text-green-600">12</p>
             <p className="text-sm text-gray-600">Currently running</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow">
@@ -19,13 +23,16 @@ const CampaignMonitoring = () => {
           </div>
           <div className="bg-white p-6 rounded-lg shadow">
             <h3 className="text-lg font-semibold mb-2">Engagement Rate</h3>
-            <p className="text-3xl font-bold text-purple-600">8.7%</p>
+            <p className="text-3xl font-bold text-green-600">8.7%</p>
             <p className="text-sm text-gray-600">Average across campaigns</p>
           </div>
         </div>
-        
+
+        {/* Recent Campaign Performance */}
         <div className="mt-8 bg-white rounded-lg shadow p-6">
-          <h2 className="text-xl font-semibold mb-4">Recent Campaign Performance</h2>
+          <h2 className="text-xl font-semibold mb-4 text-green-700">
+            Recent Campaign Performance
+          </h2>
           <div className="overflow-x-auto">
             <table className="min-w-full divide-y divide-gray-200">
               <thead>

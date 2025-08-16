@@ -10,6 +10,7 @@ import { Logo } from "@/components/ui/logo";
 export default function Dashboard() {
   return (
     <div className="flex h-screen bg-background">
+      {/* Sidebar */}
       <div className="flex flex-col border-r border-border min-w-[250px]">
         <div className="p-4 border-b border-border flex items-center justify-center cursor-pointer">
           <Link to="/">
@@ -19,6 +20,7 @@ export default function Dashboard() {
         <Sidebar />
       </div>
 
+      {/* Main Section */}
       <div className="flex-1 flex flex-col">
         {/* Dashboard heading */}
         <div className="bg-card border-b border-border p-6">
@@ -32,8 +34,7 @@ export default function Dashboard() {
           {/* Action Button */}
           <div className="flex justify-end">
             <Button
-              variant="hero"
-              className="gap-2"
+              className="gap-2 bg-green-600 hover:bg-green-700 text-white"
               onClick={() => {
                 console.log("Opening new campaign creation...");
                 alert("Campaign creation feature coming soon!");
@@ -56,8 +57,8 @@ export default function Dashboard() {
           <div className="grid gap-6 md:grid-cols-2">
             <Card className="bg-gradient-card">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <BarChart3 className="h-5 w-5 text-primary" />
+                <CardTitle className="flex items-center gap-2 text-green-700">
+                  <BarChart3 className="h-5 w-5 text-green-600" />
                   Campaign Performance
                 </CardTitle>
               </CardHeader>
@@ -70,8 +71,8 @@ export default function Dashboard() {
 
             <Card className="bg-gradient-card">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <BarChart3 className="h-5 w-5 text-accent-bright" />
+                <CardTitle className="flex items-center gap-2 text-green-700">
+                  <BarChart3 className="h-5 w-5 text-green-600" />
                   Engagement Trends
                 </CardTitle>
               </CardHeader>

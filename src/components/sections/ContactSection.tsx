@@ -20,7 +20,7 @@ export function ContactSection() {
             <Card className="hover-lift">
               <CardHeader>
                 <div className="flex items-center gap-x-3">
-                  <Phone className="h-6 w-6 text-primary" />
+                  <Phone className="h-6 w-6 text-emerald-600" />
                   <CardTitle>Call Us</CardTitle>
                 </div>
               </CardHeader>
@@ -28,12 +28,12 @@ export function ContactSection() {
                 <CardDescription className="text-lg">
                   <a
                     href="tel:+910000000000"
-                    className="text-primary hover:underline"
+                    className="text-emerald-600 hover:underline"
                   >
                     +91 00000 00000
                   </a>
                 </CardDescription>
-                <p className="mt-2 text-sm text-muted-foreground">
+                <p className="mt-2 text-sm text-gray-600">
                   Available 9AM - 6PM IST
                 </p>
               </CardContent>
@@ -42,7 +42,7 @@ export function ContactSection() {
             <Card className="hover-lift">
               <CardHeader>
                 <div className="flex items-center gap-x-3">
-                  <Mail className="h-6 w-6 text-primary" />
+                  <Mail className="h-6 w-6 text-teal-600" />
                   <CardTitle>Email Us</CardTitle>
                 </div>
               </CardHeader>
@@ -50,12 +50,12 @@ export function ContactSection() {
                 <CardDescription className="text-lg">
                   <a
                     href="mailto:contact@gen-goodwill.ai"
-                    className="text-primary hover:underline"
+                    className="text-teal-600 hover:underline"
                   >
                     contact@gen-goodwill.ai
                   </a>
                 </CardDescription>
-                <p className="mt-2 text-sm text-muted-foreground">
+                <p className="mt-2 text-sm text-gray-600">
                   Response within 24 hours
                 </p>
               </CardContent>
@@ -64,7 +64,7 @@ export function ContactSection() {
             <Card className="hover-lift">
               <CardHeader>
                 <div className="flex items-center gap-x-3">
-                  <MapPin className="h-6 w-6 text-primary" />
+                  <MapPin className="h-6 w-6 text-green-600" />
                   <CardTitle>Visit Us</CardTitle>
                 </div>
               </CardHeader>
@@ -72,7 +72,7 @@ export function ContactSection() {
                 <CardDescription className="text-lg">
                   Gen Goodwill.ai HQ
                 </CardDescription>
-                <p className="mt-2 text-sm text-muted-foreground">
+                <p className="mt-2 text-sm text-gray-600">
                   Mumbai, India
                 </p>
               </CardContent>

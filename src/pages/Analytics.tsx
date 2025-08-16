@@ -132,7 +132,7 @@ const Analytics = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50 to-emerald-50 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <section className="text-center max-w-4xl mx-auto">
         <h1 className="text-5xl font-bold text-gray-900 mb-6">Advanced Analytics & Reporting</h1>
         <p className="text-xl text-gray-600 mb-12">
@@ -140,16 +140,16 @@ const Analytics = () => {
           real-time insights, and comprehensive reporting tools.
         </p>
         
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white mb-12">
+        <div className="bg-gradient-to-r from-slate-700 to-emerald-700 rounded-2xl p-8 text-white mb-12">
           <h3 className="text-2xl font-bold mb-4">📊 Analytics Demo</h3>
-          <p className="text-blue-100 mb-6">
+          <p className="text-slate-100 mb-6">
             See how our advanced analytics can transform your campaign insights and ROI.
           </p>
           <div className="flex justify-center gap-4">
-            <Link to="/demo" className="bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
+            <Link to="/demo" className="bg-white text-slate-700 px-6 py-3 rounded-lg hover:bg-slate-100 transition font-semibold">
               Book Analytics Demo
             </Link>
-            <Link to="/signup" className="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition">
+            <Link to="/signup" className="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-slate-700 transition">
               Start Free Trial
             </Link>
           </div>
