@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Header } from "@/components/layout/Header";
 
 const Analytics = () => {
   useEffect(() => {
@@ -132,29 +133,116 @@ const Analytics = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <section className="text-center max-w-4xl mx-auto">
-        <h1 className="text-5xl font-bold text-gray-900 mb-6">Advanced Analytics & Reporting</h1>
-        <p className="text-xl text-gray-600 mb-12">
-          Unlock the full potential of your influencer campaigns with AI-powered analytics, 
-          real-time insights, and comprehensive reporting tools.
-        </p>
-        
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white mb-12">
-          <h3 className="text-2xl font-bold mb-4">📊 Analytics Demo</h3>
-          <p className="text-blue-100 mb-6">
-            See how our advanced analytics can transform your campaign insights and ROI.
+    <main className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <Header />
+      <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <section className="text-center max-w-4xl mx-auto">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">Advanced Analytics & Reporting</h1>
+          <p className="text-xl text-gray-600 mb-12">
+            Unlock the full potential of your influencer campaigns with AI-powered analytics, 
+            real-time insights, and comprehensive reporting tools.
+          </p>
+          
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white mb-12">
+            <h3 className="text-2xl font-bold mb-4">📊 Analytics Demo</h3>
+            <p className="text-blue-100 mb-6">
+              See how our advanced analytics can transform your campaign insights and ROI.
+            </p>
+            <div className="flex justify-center gap-4">
+              <Link to="/demo" className="bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
+                Book Analytics Demo
+              </Link>
+              <Link to="/signup" className="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition">
+                Start Free Trial
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Comprehensive Analytics Features</h2>
+            <p className="text-xl text-gray-600">Everything you need to measure, optimize, and scale your influencer marketing campaigns</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {analyticsFeatures.map((feature, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                <div className="text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                <p className="text-gray-600 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.details.map((detail, detailIndex) => (
+                    <li key={detailIndex} className="flex items-start">
+                      <span className="text-green-500 mr-2">✓</span>
+                      <span className="text-gray-600 text-sm">{detail}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Key Performance Metrics</h2>
+            <p className="text-xl text-gray-600">Track the metrics that matter most for your campaigns</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {metrics.map((metric, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-md p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{metric.name}</h3>
+                <p className="text-gray-600 mb-3">{metric.description}</p>
+                <div className="bg-blue-50 rounded-lg p-3">
+                  <p className="text-sm text-blue-800">
+                    <span className="font-semibold">Benchmark:</span> {metric.benchmark}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Automated Reporting</h2>
+            <p className="text-xl text-gray-600">Get the insights you need, when you need them</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {reportTypes.map((report, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-md p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{report.type}</h3>
+                <div className="space-y-2">
+                  <p className="text-gray-600">
+                    <span className="font-semibold">Frequency:</span> {report.frequency}
+                  </p>
+                  <p className="text-gray-600">
+                    <span className="font-semibold">Includes:</span> {report.includes}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
+          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Analytics?</h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Join thousands of brands using our advanced analytics to scale their influencer marketing
           </p>
           <div className="flex justify-center gap-4">
-            <Link to="/demo" className="bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
-              Book Analytics Demo
+            <Link to="/demo" className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
+              Schedule Demo
             </Link>
-            <Link to="/signup" className="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition">
+            <Link to="/signup" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition">
               Start Free Trial
             </Link>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
   );
 };

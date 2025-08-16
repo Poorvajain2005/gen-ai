@@ -1,12 +1,12 @@
 import { useLocation } from "react-router-dom";
-import { Layout } from "@/components/layout/Layout";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ApiSection } from "@/components/sections/ApiSection";
 import { StatsSection } from "@/components/sections/StatsSection";
 import { FeaturesSection } from "@/components/sections/FeaturesSection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { PricingSection } from "@/components/sections/PricingSection";
-import { ContactSection } from "@/components/sections/ContactSection";
+import { ContactSection } from "@/components/sections/ContactSection"; 
+import FaqSection from "@/components/sections/FaqSection";
 import { LandingTabs } from "@/components/ui/LandingTabs";
 
 const Index = () => {
@@ -23,7 +23,8 @@ const Index = () => {
           <StatsSection />
           <FeaturesSection />
           <TestimonialsSection />
-          <PricingSection />
+          {/* <PricingSection /> */}
+          <FaqSection />
           <ContactSection />
         </>
       )}

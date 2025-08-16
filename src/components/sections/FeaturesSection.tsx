@@ -116,7 +116,7 @@ export function FeaturesSection() {
   const [hoveredFeature, setHoveredFeature] = useState<number | null>(null);
 
   return (
-    <section className="relative py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 overflow-hidden">
+    <section className="relative py-12 bg-gradient-to-br from-gray-50 via-white to-blue-50 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-100/20 via-transparent to-purple-100/20" />
       <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-200/10 rounded-full blur-3xl animate-pulse" />

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Header } from "@/components/layout/Header";
 
 const Blog = () => {
   useEffect(() => {
@@ -60,8 +61,10 @@ const Blog = () => {
   const categories = ["All", "Ecommerce", "Agencies", "SaaS", "Enterprise", "Strategy", "Case Study"];
 
   return (
-    <main className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <section className="text-center max-w-4xl mx-auto">
+    <main className="min-h-screen bg-gray-50">
+      <Header />
+      <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <section className="text-center max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Influencer Marketing Insights & Resources</h1>
         <p className="text-lg text-gray-600 mb-8">
           Expert insights, strategies, and case studies for ecommerce brands, agencies, SaaS companies, and enterprises. 
@@ -127,7 +130,8 @@ const Blog = () => {
           View All Blog Posts
         </Link>
       </section>
-    </main>
+    </div>
+  </main>
   );
 };
 

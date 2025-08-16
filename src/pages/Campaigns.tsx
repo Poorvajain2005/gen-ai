@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Header } from "@/components/layout/Header";
 
 const Campaigns = () => {
   useEffect(() => {
@@ -136,24 +137,27 @@ const Campaigns = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <section className="text-center max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">End-to-End Campaign Management</h1>
-        <p className="text-lg text-gray-600 mb-8">
-          Streamline your entire influencer marketing process from planning to performance analysis. 
-          Manage hundreds of campaigns simultaneously with automated workflows, real-time tracking, and team collaboration tools.
-        </p>
-        
-        <div className="bg-blue-50 rounded-lg p-6 mb-8">
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">🎯 Campaign Demo</h3>
-          <p className="text-gray-600 mb-4">
-            See how easy it is to manage complex influencer campaigns with our interactive demo.
+    <main className="min-h-screen bg-gray-50">
+      <Header />
+      <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <section className="text-center max-w-4xl mx-auto">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">End-to-End Campaign Management</h1>
+          <p className="text-lg text-gray-600 mb-8">
+            Streamline your entire influencer marketing process from planning to performance analysis. 
+            Manage hundreds of campaigns simultaneously with automated workflows, real-time tracking, and team collaboration tools.
           </p>
-          <Link to="/demo" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">
-            Book Campaign Demo
-          </Link>
-        </div>
-      </section>
+          
+          <div className="bg-blue-50 rounded-lg p-6 mb-8">
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">🎯 Campaign Demo</h3>
+            <p className="text-gray-600 mb-4">
+              See how easy it is to manage complex influencer campaigns with our interactive demo.
+            </p>
+            <Link to="/demo" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">
+              Book Campaign Demo
+            </Link>
+          </div>
+        </section>
+      </div>
 
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
         {campaignFeatures.map((feature, index) => (

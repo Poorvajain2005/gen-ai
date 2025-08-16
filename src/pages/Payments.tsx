@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Header } from "@/components/layout/Header";
 
 const Payments = () => {
   useEffect(() => {
@@ -122,84 +123,100 @@ const Payments = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-indigo-50 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <section className="text-center max-w-4xl mx-auto">
-        <h1 className="text-5xl font-bold text-gray-900 mb-6">Global Payment Processing</h1>
-        <p className="text-xl text-gray-600 mb-12">
-          Secure and efficient payment processing for influencer campaigns with support for 135+ currencies, 
-          automated payouts, and comprehensive compliance features.
-        </p>
-        
-        <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white mb-12">
-          <h3 className="text-2xl font-bold mb-4">💳 Payment Demo</h3>
-          <p className="text-green-100 mb-6">
-            See how easy it is to process payments globally with our secure payment system.
+    <main className="min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-indigo-50">
+      <Header />
+      <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <section className="text-center max-w-4xl mx-auto">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">Global Payment Processing</h1>
+          <p className="text-xl text-gray-600 mb-12">
+            Secure and efficient payment processing for influencer campaigns with support for 135+ currencies, 
+            automated payouts, and comprehensive compliance features.
           </p>
-          <div className="flex justify-center gap-4">
-            <Link to="/demo" className="bg-white text-green-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
-              Book Payment Demo
-            </Link>
-            <Link to="/signup" className="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-green-600 transition">
-              Start Free Trial
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-        {paymentFeatures.map((feature, index) => (
-          <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
-            <div className="text-4xl mb-4">{feature.icon}</div>
-            <h3 className="text-xl font-semibold mb-3 text-gray-900">{feature.title}</h3>
-            <p className="text-gray-600 mb-4">{feature.description}</p>
-            <ul className="text-sm text-gray-600 space-y-1">
-              {feature.details.map((detail, idx) => (
-                <li key={idx} className="flex items-start">
-                  <span className="text-green-500 mr-2">•</span>
-                  {detail}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </section>
-
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Supported Payment Methods</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {paymentMethods.map((method, index) => (
-            <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="text-lg font-semibold mb-2 text-gray-900">{method.method}</h3>
-              <p className="text-sm text-gray-600 mb-2">{method.description}</p>
-              <div className="mb-2">
-                <span className="text-sm font-medium text-gray-900">Processing: </span>
-                <span className="text-sm text-gray-600">{method.processingTime}</span>
-              </div>
-              <div>
-                <span className="text-sm font-medium text-gray-900">Fees: </span>
-                <span className="text-sm text-gray-600">{method.fees}</span>
-              </div>
+          
+          <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white mb-12">
+            <h3 className="text-2xl font-bold mb-4">💳 Payment Demo</h3>
+            <p className="text-green-100 mb-6">
+              See how easy it is to process payments globally with our secure payment system.
+            </p>
+            <div className="flex justify-center gap-4">
+              <Link to="/demo" className="bg-white text-green-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
+                Book Payment Demo
+              </Link>
+              <Link to="/signup" className="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-green-600 transition">
+                Start Free Trial
+              </Link>
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        </section>
 
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Security & Compliance</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {securityFeatures.map((feature, index) => (
-            <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center">
-              <h3 className="text-lg font-semibold mb-2 text-gray-900">{feature.title}</h3>
-              <p className="text-sm text-gray-600">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Payment Processing Features</h2>
+            <p className="text-xl text-gray-600">Everything you need to process payments globally and efficiently</p>
+          </div>
 
-      <section className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white">
-        <div className="max-w-4xl mx-auto text-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {paymentFeatures.map((feature, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                <div className="text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                <p className="text-gray-600 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.details.map((detail, idx) => (
+                    <li key={idx} className="flex items-start">
+                      <span className="text-green-500 mr-2">•</span>
+                      <span className="text-gray-600 text-sm">{detail}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Supported Payment Methods</h2>
+            <p className="text-gray-600">Multiple payment options to suit your needs</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {paymentMethods.map((method, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6">
+                <h3 className="text-lg font-semibold mb-2 text-gray-900">{method.method}</h3>
+                <p className="text-sm text-gray-600 mb-2">{method.description}</p>
+                <div className="mb-2">
+                  <span className="text-sm font-medium text-gray-900">Processing: </span>
+                  <span className="text-sm text-gray-600">{method.processingTime}</span>
+                </div>
+                <div>
+                  <span className="text-sm font-medium text-gray-900">Fees: </span>
+                  <span className="text-sm text-gray-600">{method.fees}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Security & Compliance</h2>
+            <p className="text-gray-600">Enterprise-grade security for your peace of mind</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {securityFeatures.map((feature, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 text-center">
+                <h3 className="text-lg font-semibold mb-2 text-gray-900">{feature.title}</h3>
+                <p className="text-sm text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Streamline Your Payments?</h2>
-          <p className="text-green-100 mb-6">
+          <p className="text-xl text-green-100 mb-8">
             Join 10,000+ brands processing millions in influencer payments securely and efficiently.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -213,8 +230,8 @@ const Payments = () => {
           <p className="text-green-100 text-sm mt-4">
             14-day free trial • No credit card required • 135+ currencies supported
           </p>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
   );
 };

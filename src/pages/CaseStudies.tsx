@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Header } from "@/components/layout/Header";
 
 const CaseStudies = () => {
   useEffect(() => {
@@ -108,8 +109,10 @@ const CaseStudies = () => {
   const industries = ["All", "Ecommerce", "SaaS", "Agency", "Enterprise", "Beauty", "Fashion", "Tech", "Fintech"];
 
   return (
-    <main className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <section className="text-center max-w-4xl mx-auto">
+    <main className="min-h-screen bg-gray-50">
+      <Header />
+      <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"> </div>
+        <section className="text-center max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Success Stories & Case Studies</h1>
         <p className="text-lg text-gray-600 mb-8">
           Real results from real brands. Discover how leading companies across industries 
