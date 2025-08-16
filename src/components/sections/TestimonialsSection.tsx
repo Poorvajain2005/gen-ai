@@ -8,7 +8,7 @@ const testimonials = [
     name: "Sarah Chen",
     role: "Marketing Director",
     company: "Fashion Nova",
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face",
     content: "Gen Goodwill.ai transformed our influencer marketing. We saw a 3x ROI increase in just 6 months! The AI-powered matching is incredible.",
     rating: 5,
     video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
@@ -79,7 +79,7 @@ export function TestimonialsSection() {
   };
 
   return (
-    <section className="relative py-24 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 overflow-hidden">
+    <section className="relative py-12 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-500/10 via-transparent to-blue-500/10" />
       <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse" />
@@ -241,4 +241,4 @@ export function TestimonialsSection() {
       </div>
     </section>
   );
-} 
+}
