@@ -42,6 +42,10 @@ import Management from "./pages/Management";
 import Inbox from "./pages/Inbox";
 import ShopifyIntegration from "./pages/ShopifyIntegration";
 import CampaignMonitoring from "./pages/CampaignMonitoring";
+import Resources from "./pages/Resources";
+import Certification from "./pages/Certification";
+import WebinarRegistration from "./pages/WebinarRegistration";
+import Product from "./pages/Product";
 import { Layout } from "@/components/layout/Layout";
 import { ModernHeader } from "@/components/layout/ModernHeader";
 
@@ -93,6 +97,8 @@ const App = () => (
               <Route path="/blog" element={<Blog />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/webinars" element={<Webinars />} />
+              <Route path="/webinars/register" element={<WebinarRegistration />} />
+              <Route path="/certification" element={<Certification />} />
               <Route path="/help" element={<Help />} />
               <Route path="/api" element={<Api />} />
               <Route path="/updates" element={<Updates />} />
@@ -106,6 +112,8 @@ const App = () => (
               <Route path="/inbox" element={<Inbox />} />
               <Route path="/shopify-integration" element={<ShopifyIntegration />} />
               <Route path="/campaign-monitoring" element={<CampaignMonitoring />} />
+              <Route path="/resources" element={<Resources />} />
+              <Route path="/product" element={<Product />} />
               <Route
                 path="/influencers"
                 element={

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Header } from "@/components/layout/Header";
 
 const Saas = () => {
   useEffect(() => {
@@ -117,8 +118,10 @@ const Saas = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-indigo-50 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <section className="text-center max-w-4xl mx-auto">
+    <main className="min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-indigo-50">
+      <Header />
+      <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <section className="text-center max-w-4xl mx-auto">
         <h1 className="text-5xl font-bold text-gray-900 mb-6">SaaS Influencer Marketing</h1>
         <p className="text-xl text-gray-600 mb-12">
           Drive user acquisition, build trust, and scale your SaaS business with strategic B2B influencer partnerships.
@@ -206,7 +209,8 @@ const Saas = () => {
           </p>
         </div>
       </section>
-    </main>
+    </div>
+  </main>
   );
 };
 

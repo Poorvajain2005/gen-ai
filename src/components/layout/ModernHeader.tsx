@@ -110,7 +110,7 @@ const navigation = [
 
 const ctaButtons = [
   { name: "Log in", href: "/login", variant: "outline" as const },
-  { name: "Start Free Trial", href: "/signup", variant: "hero" as const },
+  { name: "Start Free Trial", href: "/signup", variant: "default" as const },
   { name: "Schedule Demo", href: "/demo", variant: "outline" as const },
 ];
 
@@ -217,11 +217,7 @@ export function ModernHeader() {
               variant={button.variant}
               size="sm"
               asChild
-              className={cn(
-                button.variant === "hero" &&
-                  "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700",
-                "transition-all duration-200 px-4"
-              )}
+              className="transition-all duration-200 px-4"
             >
               <Link to={button.href}>{button.name}</Link>
             </Button>

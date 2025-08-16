@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Header } from "@/components/layout/Header";
 
 const Discovery = () => {
   useEffect(() => {
@@ -136,69 +137,72 @@ const Discovery = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <section className="text-center max-w-4xl mx-auto">
-        <h1 className="text-5xl font-bold text-gray-900 mb-6">AI-Powered Influencer Discovery</h1>
-        <p className="text-xl text-gray-600 mb-12">
-          Find the perfect influencers for your brand with our advanced AI technology. Access 10M+ verified profiles with detailed analytics, audience insights, and fraud detection.
-        </p>
-      </section>
+    <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
+      <Header />
+      <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <section className="text-center max-w-4xl mx-auto">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">AI-Powered Influencer Discovery</h1>
+          <p className="text-xl text-gray-600 mb-12">
+            Find the perfect influencers for your brand with our advanced AI technology. Access 10M+ verified profiles with detailed analytics, audience insights, and fraud detection.
+          </p>
+        </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-        {features.map((feature, idx) => (
-          <div key={idx} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
-            <div className="text-4xl mb-4">{feature.icon}</div>
-            <h3 className="text-xl font-semibold mb-3 text-gray-900">{feature.title}</h3>
-            <p className="text-gray-600 mb-4">{feature.description}</p>
-            <ul className="text-sm text-gray-600 space-y-1">
-              {feature.details.map((detail, i) => (
-                <li key={i} className="flex items-start">
-                  <span className="text-blue-500 mr-2">•</span>
-                  {detail}
-                </li>
-              ))}
-            </ul>
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {features.map((feature, idx) => (
+            <div key={idx} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
+              <div className="text-4xl mb-4">{feature.icon}</div>
+              <h3 className="text-xl font-semibold mb-3 text-gray-900">{feature.title}</h3>
+              <p className="text-gray-600 mb-4">{feature.description}</p>
+              <ul className="text-sm text-gray-600 space-y-1">
+                {feature.details.map((detail, i) => (
+                  <li key={i} className="flex items-start">
+                    <span className="text-blue-500 mr-2">•</span>
+                    {detail}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Influencer Categories</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {influencerCategories.map((category, idx) => (
+              <div key={idx} className="bg-white p-6 rounded-xl shadow-lg">
+                <h3 className="text-lg font-semibold mb-2 text-gray-900">{category.category}</h3>
+                <p className="text-sm text-gray-600 mb-2">{category.range}</p>
+                <p className="text-sm text-gray-600 mb-3">{category.description}</p>
+                <div>
+                  <p className="text-sm font-medium text-gray-900 mb-1">Best for:</p>
+                  <ul className="text-xs text-gray-600 space-y-1">
+                    {category.bestFor.map((use, i) => (
+                      <li key={i}>• {use}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </section>
+        </section>
 
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Influencer Categories</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {influencerCategories.map((category, idx) => (
-            <div key={idx} className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="text-lg font-semibold mb-2 text-gray-900">{category.category}</h3>
-              <p className="text-sm text-gray-600 mb-2">{category.range}</p>
-              <p className="text-sm text-gray-600 mb-3">{category.description}</p>
-              <div>
-                <p className="text-sm font-medium text-gray-900 mb-1">Best for:</p>
-                <ul className="text-xs text-gray-600 space-y-1">
-                  {category.bestFor.map((use, i) => (
-                    <li key={i}>• {use}</li>
-                  ))}
-                </ul>
+        <section>
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Platform Coverage</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {platforms.map((platform, idx) => (
+              <div key={idx} className="bg-white p-6 rounded-xl shadow-lg">
+                <div className="text-3xl mb-3">{platform.icon}</div>
+                <h3 className="text-lg font-semibold mb-2 text-gray-900">{platform.name}</h3>
+                <p className="text-sm text-gray-600 mb-3">{platform.description}</p>
+                <div>
+                  <p className="text-sm font-medium text-gray-900 mb-1">Perfect for:</p>
+                  <p className="text-xs text-gray-600">{platform.strengths.join(", ")}</p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section>
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Platform Coverage</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {platforms.map((platform, idx) => (
-            <div key={idx} className="bg-white p-6 rounded-xl shadow-lg">
-              <div className="text-3xl mb-3">{platform.icon}</div>
-              <h3 className="text-lg font-semibold mb-2 text-gray-900">{platform.name}</h3>
-              <p className="text-sm text-gray-600 mb-3">{platform.description}</p>
-              <div>
-                <p className="text-sm font-medium text-gray-900 mb-1">Perfect for:</p>
-                <p className="text-xs text-gray-600">{platform.strengths.join(", ")}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
+      </div>
     </main>
   );
 };

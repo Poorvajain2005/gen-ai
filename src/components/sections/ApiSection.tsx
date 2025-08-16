@@ -4,7 +4,7 @@ import { Code, Database, Zap, ShieldCheck } from "lucide-react";
 
 export function ApiSection() {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-5">
       <div className="max-w-7xl mx-auto px-6">
         {/* Announcement banner */}
         <div className="mb-8 flex items-center justify-between bg-purple-100 rounded-lg px-6 py-3 text-sm text-purple-800">

@@ -1,7 +1,6 @@
-import { Layout } from "@/components/layout/Layout";
-import { Star, CheckCircle } from "lucide-react";
+import { Header } from "@/components/layout/Header";
+import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
 
 const stats = [
   { label: "Active Brands", value: "10,000+" },
@@ -90,7 +89,8 @@ const successStories = [
 
 export default function Customers() {
   return (
-    <>
+    <main className="min-h-screen bg-gray-50">
+      <Header />
       <div className="bg-pink-50 py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-4xl font-bold mb-2">Trusted by Leading Brands</h1>
@@ -161,14 +161,14 @@ export default function Customers() {
         <h2 className="text-3xl font-bold mb-4">Join Thousands of Successful Brands</h2>
         <p className="mb-8">Start your influencer marketing journey with Gen Goodwill.ai today</p>
         <div className="space-x-4">
-          <Button variant="outline" className="text-white border-white hover:bg-white hover:text-pink-600">
+          <Button variant="outline" className="text-pink-600 border-white hover:bg-white hover:text-pink-600">
             Start Free Trial
           </Button>
-          <Button variant="ghost" className="border-white text-white hover:bg-white hover:text-pink-600">
+          <Button variant="outline" className="border-white text-pink-600 hover:bg-white hover:text-pink-600">
             Schedule Demo
           </Button>
         </div>
       </div>
-    </>
+    </main>
   );
 }

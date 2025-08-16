@@ -60,6 +60,55 @@ const plans = [
     ],
     popular: false,
     cta: "Contact Sales"
+  },
+  {
+    name: "Ultimate",
+    description: "For businesses that need everything",
+    monthlyPrice: 999,
+    yearlyPrice: 799,
+    features: [
+      "All features from Enterprise",
+      "Custom solutions",
+      "24/7 support",
+      "Dedicated infrastructure",
+      "Advanced analytics",
+      "Custom integrations",
+      "Training & onboarding"
+    ],
+    popular: false,
+    cta: "Contact Sales"
+  },
+  {
+    name: "Pro Plus",
+    description: "For teams that need advanced features",
+    monthlyPrice: 699,
+    yearlyPrice: 599,
+    features: [
+      "All features from Professional",
+      "Advanced reporting",
+      "Custom workflows",
+      "Dedicated support",
+      "API access",
+      "Fraud detection",
+      "Team collaboration"
+    ],
+    popular: false,
+    cta: "Contact Sales"
+  },
+  {
+    name: "Business",
+    description: "For growing businesses with additional needs",
+    monthlyPrice: 399,
+    yearlyPrice: 299,
+    features: [
+      "All features from Starter",
+      "Custom integrations",
+      "Advanced analytics",
+      "Priority support",
+      "Team collaboration"
+    ],
+    popular: false,
+    cta: "Contact Sales"
   }
 ];
 
@@ -70,6 +119,12 @@ const comparisonFeatures = [
   { feature: "Support", starter: "Email", professional: "Priority", enterprise: "Dedicated Manager" },
   { feature: "API Access", starter: "❌", professional: "✅", enterprise: "✅" },
   { feature: "Custom Integrations", starter: "❌", professional: "❌", enterprise: "✅" },
+  { feature: "Advanced Reporting", starter: "❌", professional: "✅", enterprise: "✅" },
+  { feature: "Dedicated Support", starter: "❌", professional: "❌", enterprise: "✅" },
+  { feature: "Custom Solutions", starter: "❌", professional: "❌", enterprise: "✅" },
+  { feature: "24/7 Support", starter: "❌", professional: "❌", enterprise: "✅" },
+  { feature: "Dedicated Infrastructure", starter: "❌", professional: "❌", enterprise: "✅" },
+  { feature: "Advanced Analytics", starter: "❌", professional: "❌", enterprise: "✅" },
   { feature: "White-label", starter: "❌", professional: "❌", enterprise: "✅" }
 ];
 
@@ -78,8 +133,8 @@ export default function Pricing() {
 
   return (
     <>
-      <div className="bg-background py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="bg-background min-h-screen overflow-y-auto">
+        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
           {/* Header */}
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="text-base font-semibold leading-7 text-primary">Pricing</h2>
@@ -108,7 +163,7 @@ export default function Pricing() {
           </div>
 
           {/* Pricing cards */}
-          <div className="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          <div className="overflow-y-auto max-h-[500px] isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {plans.map((plan, index) => (
               <Card
                 key={plan.name}
@@ -149,13 +204,13 @@ export default function Pricing() {
                   )}
                 </CardHeader>
                 <CardContent>
-                  <Button
-                    variant={plan.popular ? "hero" : "outline"}
+                    <Button
+                    variant="outline" // Change to match other buttons
                     className="w-full mb-8"
                     size="lg"
-                  >
+                    >
                     {plan.cta}
-                  </Button>
+                    </Button>
                   <ul role="list" className="space-y-3 text-sm leading-6 text-muted-foreground">
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex gap-x-3">
@@ -170,7 +225,7 @@ export default function Pricing() {
           </div>
 
           {/* Feature comparison table */}
-          <div className="mt-24">
+          <div className="mt-24 overflow-y-auto max-h-[400px]">
             <h3 className="text-2xl font-bold text-center mb-12">Feature Comparison</h3>
             <div className="overflow-hidden rounded-2xl bg-gradient-card shadow-purple-lg">
               <table className="w-full">

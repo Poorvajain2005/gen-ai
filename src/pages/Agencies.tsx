@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Header } from "@/components/layout/Header";
 
 const Agencies = () => {
   useEffect(() => {
@@ -113,8 +114,10 @@ const Agencies = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-indigo-50 via-blue-50 to-cyan-50 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <section className="text-center max-w-4xl mx-auto">
+    <main className="min-h-screen bg-gradient-to-br from-indigo-50 via-blue-50 to-cyan-50">
+      <Header />
+      <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <section className="text-center max-w-4xl mx-auto">
         <h1 className="text-5xl font-bold text-gray-900 mb-6">Agency Solutions</h1>
         <p className="text-xl text-gray-600 mb-12">
           Scale your agency's influencer marketing services with white-label solutions, 
@@ -203,7 +206,8 @@ const Agencies = () => {
           </p>
         </div>
       </section>
-    </main>
+    </div>
+  </main>
   );
 };
 
