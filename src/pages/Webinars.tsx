@@ -101,7 +101,7 @@ const Webinars = () => {
   const webinarCategories = ["All", "Ecommerce", "SaaS", "Agencies", "Enterprise", "Analytics", "Strategy", "Compliance"];
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-emerald-50 via-slate-50 to-teal-50 py-12 px-4 sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -113,10 +113,10 @@ const Webinars = () => {
             Learn proven strategies from brands that have generated millions through influencer partnerships.
           </p>
           <div className="flex justify-center gap-4">
-            <Link to="/webinars/register" className="bg-emerald-600 text-white px-8 py-3 rounded-lg hover:bg-emerald-700 transition">
+            <Link to="/webinars/register" className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition">
               Browse All Webinars
             </Link>
-            <Link to="/certification" className="border border-emerald-600 text-emerald-600 px-8 py-3 rounded-lg hover:bg-emerald-50 transition">
+            <Link to="/certification" className="border border-purple-600 text-purple-600 px-8 py-3 rounded-lg hover:bg-purple-50 transition">
               Get Certified
             </Link>
           </div>
@@ -125,19 +125,19 @@ const Webinars = () => {
         {/* Stats Section */}
         <section className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="text-3xl font-bold text-emerald-600 mb-2">50K+</div>
+            <div className="text-3xl font-bold text-purple-600 mb-2">50K+</div>
             <div className="text-gray-600">Attendees Trained</div>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="text-3xl font-bold text-emerald-600 mb-2">200+</div>
+            <div className="text-3xl font-bold text-purple-600 mb-2">200+</div>
             <div className="text-gray-600">Expert Speakers</div>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="text-3xl font-bold text-emerald-600 mb-2">95%</div>
+            <div className="text-3xl font-bold text-purple-600 mb-2">95%</div>
             <div className="text-gray-600">Satisfaction Rate</div>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
-            <div className="text-3xl font-bold text-emerald-600 mb-2">15K+</div>
+            <div className="text-3xl font-bold text-purple-600 mb-2">15K+</div>
             <div className="text-gray-600">Certifications Issued</div>
           </div>
         </section>
@@ -151,7 +151,7 @@ const Webinars = () => {
                 <div className="relative">
                   <img src={webinar.image} alt={webinar.title} className="w-full h-48 object-cover" />
                   <div className="absolute top-4 left-4">
-                    <span className="bg-emerald-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                    <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
                       {webinar.category}
                     </span>
                   </div>
@@ -186,7 +186,7 @@ const Webinars = () => {
                     <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">{webinar.level}</span>
                   </div>
                   
-                  <button className="w-full mt-4 bg-emerald-600 text-white py-2 rounded-lg hover:bg-emerald-700 transition">
+                  <button className="w-full mt-4 bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition">
                     Register Free
                   </button>
                 </div>
@@ -234,7 +234,7 @@ const Webinars = () => {
                   </ul>
                 </div>
                 
-                <button className="w-full bg-emerald-600 text-white py-2 rounded-lg hover:bg-emerald-700 transition">
+                <button className="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition">
                   Start Certification
                 </button>
               </div>
@@ -265,7 +265,7 @@ const Webinars = () => {
                   <p className="text-sm text-gray-600 mb-3">Speaker: {webinar.speaker}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-500">{webinar.views} views</span>
-                    <button className="text-emerald-600 hover:text-emerald-800 font-medium text-sm">
+                    <button className="text-purple-600 hover:text-purple-800 font-medium text-sm">
                       Watch Now →
                     </button>
                   </div>
@@ -276,17 +276,17 @@ const Webinars = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-gradient-to-r from-emerald-600 to-slate-600 rounded-2xl p-8 text-white">
+        <section className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Level Up Your Skills?</h2>
-            <p className="text-emerald-100 mb-6">
+            <p className="text-purple-100 mb-6">
               Join thousands of marketers who have transformed their influencer marketing skills through our webinars and certifications.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/webinars/register" className="bg-white text-emerald-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
+              <Link to="/webinars/register" className="bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
                 Browse All Webinars
               </Link>
-              <Link to="/certification" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition">
+              <Link to="/certification" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-purple-600 transition">
                 Start Certification
               </Link>
             </div>

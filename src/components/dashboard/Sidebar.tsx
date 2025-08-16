@@ -63,10 +63,10 @@ export function Sidebar() {
               key={item.name}
               to={item.href}
               className={cn(
-                "flex items-center rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-slate-100 hover:text-slate-900",
+                "flex items-center rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
                 isActive
-                  ? "bg-emerald-600 text-white shadow-md"
-                  : "text-slate-600",
+                  ? "bg-primary text-primary-foreground shadow-md"
+                  : "text-muted-foreground",
                 collapsed && "justify-center px-2"
               )}
             >
@@ -83,7 +83,7 @@ export function Sidebar() {
           "flex items-center",
           collapsed ? "justify-center" : "space-x-3"
         )}>
-          <div className="h-8 w-8 rounded-full bg-gradient-to-r from-emerald-500 to-slate-600" />
+          <div className="h-8 w-8 rounded-full bg-gradient-primary" />
           {!collapsed && (
             <div className="min-w-0 flex-1">
               <p className="text-sm font-medium text-foreground">John Doe</p>

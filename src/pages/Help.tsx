@@ -126,32 +126,23 @@ const Help = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-green-100 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <main className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <section className="text-center max-w-4xl mx-auto">
-        <h1 className="text-5xl font-bold text-gray-900 mb-6">
-          Help & Support Center
-        </h1>
+        <h1 className="text-5xl font-bold text-gray-900 mb-6">Help & Support Center</h1>
         <p className="text-xl text-gray-600 mb-12">
-          Get the help you need with comprehensive documentation, tutorials, and
-          expert support.
+          Get the help you need with comprehensive documentation, tutorials, and expert support.
         </p>
-
-        <div className="bg-gradient-to-r from-green-700 to-green-600 rounded-2xl p-8 text-white mb-12">
+        
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white mb-12">
           <h3 className="text-2xl font-bold mb-4">💬 Need Help?</h3>
-          <p className="text-green-100 mb-6">
+          <p className="text-blue-100 mb-6">
             Our support team is available 24/7 to help you succeed.
           </p>
           <div className="flex justify-center gap-4">
-            <Link
-              to="/contact"
-              className="bg-white text-green-700 px-6 py-3 rounded-lg hover:bg-gray-100 transition font-semibold"
-            >
+            <Link to="/contact" className="bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
               Contact Support
             </Link>
-            <Link
-              to="/demo"
-              className="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-green-700 transition"
-            >
+            <Link to="/demo" className="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition">
               Book Demo
             </Link>
           </div>
@@ -160,19 +151,14 @@ const Help = () => {
 
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         {helpCategories.map((category, index) => (
-          <div
-            key={index}
-            className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition"
-          >
+          <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition">
             <div className="text-4xl mb-4">{category.icon}</div>
-            <h3 className="text-xl font-semibold mb-3 text-gray-900">
-              {category.title}
-            </h3>
+            <h3 className="text-xl font-semibold mb-3 text-gray-900">{category.title}</h3>
             <p className="text-gray-600 mb-4">{category.description}</p>
             <ul className="text-sm text-gray-600 space-y-1">
               {category.articles.map((article, idx) => (
                 <li key={idx} className="flex items-start">
-                  <span className="text-green-600 mr-2">•</span>
+                  <span className="text-blue-500 mr-2">•</span>
                   {article}
                 </li>
               ))}
@@ -182,22 +168,16 @@ const Help = () => {
       </section>
 
       <section className="mb-16">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
-          Support Channels
-        </h2>
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Support Channels</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {supportChannels.map((channel, index) => (
             <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
-              <h3 className="text-lg font-semibold mb-2 text-gray-900">
-                {channel.channel}
-              </h3>
+              <h3 className="text-lg font-semibold mb-2 text-gray-900">{channel.channel}</h3>
               <p className="text-sm text-gray-600 mb-2">
-                <span className="font-medium">Availability: </span>
-                {channel.availability}
+                <span className="font-medium">Availability: </span>{channel.availability}
               </p>
               <p className="text-sm text-gray-600 mb-2">
-                <span className="font-medium">Response: </span>
-                {channel.responseTime}
+                <span className="font-medium">Response: </span>{channel.responseTime}
               </p>
               <p className="text-sm text-gray-600">{channel.description}</p>
             </div>
@@ -206,49 +186,33 @@ const Help = () => {
       </section>
 
       <section className="mb-16">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
-          Learning Resources
-        </h2>
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Learning Resources</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {resources.map((resource, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-xl shadow-lg text-center"
-            >
-              <h3 className="text-2xl font-bold text-green-700 mb-2">
-                {resource.count}
-              </h3>
-              <h4 className="text-lg font-semibold mb-2 text-gray-900">
-                {resource.type}
-              </h4>
+            <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <h3 className="text-2xl font-bold text-blue-600 mb-2">{resource.count}</h3>
+              <h4 className="text-lg font-semibold mb-2 text-gray-900">{resource.type}</h4>
               <p className="text-sm text-gray-600">{resource.description}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="bg-gradient-to-r from-green-700 to-green-600 rounded-2xl p-8 text-white">
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Still Need Help?</h2>
-          <p className="text-green-100 mb-6">
-            Our team is here to ensure your success with comprehensive support
-            and resources.
+          <p className="text-blue-100 mb-6">
+            Our team is here to ensure your success with comprehensive support and resources.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-white text-green-700 px-8 py-3 rounded-lg hover:bg-gray-100 transition font-semibold"
-            >
+            <Link to="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
               Contact Support
             </Link>
-            <Link
-              to="/demo"
-              className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-green-700 transition"
-            >
+            <Link to="/demo" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition">
               Book Demo
             </Link>
           </div>
-          <p className="text-green-100 text-sm mt-4">
+          <p className="text-blue-100 text-sm mt-4">
             24/7 support • Comprehensive documentation • Expert guidance
           </p>
         </div>

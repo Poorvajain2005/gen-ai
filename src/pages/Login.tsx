@@ -91,10 +91,15 @@ const Login = () => {
 
               <Button
                 variant="outline"
-                className="w-full flex items-center justify-center gap-2"
+                className="w-full flex items-center justify-between"
               >
                 <FcGoogle className="text-xl" />
-                <span>Continue with Google</span>
+                <span>Continue as Poorva</span>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+                  alt="Google"
+                  className="w-6 h-6"
+                />
               </Button>
 
               <div className="flex items-center my-4">

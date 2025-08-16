@@ -7,7 +7,7 @@ export function ApiSection() {
     <section className="bg-white py-20">
       <div className="max-w-7xl mx-auto px-6">
         {/* Announcement banner */}
-        <div className="mb-8 flex items-center justify-between bg-emerald-100 rounded-lg px-6 py-3 text-sm text-emerald-800">
+        <div className="mb-8 flex items-center justify-between bg-purple-100 rounded-lg px-6 py-3 text-sm text-purple-800">
           <p>
             New in Gen Goodwill.ai: create affiliate links & automate commission-based influencer payouts
           </p>
@@ -17,13 +17,13 @@ export function ApiSection() {
         </div>
 
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 bg-slate-50 rounded-lg py-12 px-8">
+        <div className="text-center max-w-3xl mx-auto mb-16 bg-purple-50 rounded-lg py-12 px-8">
           <h1 className="text-4xl font-extrabold mb-4">Powerful API for Developers</h1>
           <p className="text-gray-700 mb-8">
             Build custom integrations and applications with our comprehensive REST API. Access all Gen Goodwill.ai features programmatically.
           </p>
           <div className="flex justify-center gap-4">
-            <Button variant="default" asChild>
+            <Button variant="hero" asChild>
               <Link to="/api/access">Get API Access</Link>
             </Button>
             <Button variant="outline" asChild>
@@ -38,22 +38,22 @@ export function ApiSection() {
           <p className="text-center text-gray-600 mb-12">Everything you need to build powerful integrations</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="p-6 border rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <Code className="mx-auto mb-4 h-8 w-8 text-emerald-600" />
+              <Code className="mx-auto mb-4 h-8 w-8 text-pink-500" />
               <h3 className="text-lg font-semibold mb-2">RESTful API</h3>
               <p className="text-gray-600">Clean, intuitive REST API with JSON responses</p>
             </div>
             <div className="p-6 border rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <Database className="mx-auto mb-4 h-8 w-8 text-emerald-600" />
+              <Database className="mx-auto mb-4 h-8 w-8 text-pink-500" />
               <h3 className="text-lg font-semibold mb-2">Real-time Data</h3>
               <p className="text-gray-600">Access live influencer data and campaign metrics</p>
             </div>
             <div className="p-6 border rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <Zap className="mx-auto mb-4 h-8 w-8 text-emerald-600" />
+              <Zap className="mx-auto mb-4 h-8 w-8 text-pink-500" />
               <h3 className="text-lg font-semibold mb-2">High Performance</h3>
               <p className="text-gray-600">Fast response times with 99.9% uptime SLA</p>
             </div>
             <div className="p-6 border rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <ShieldCheck className="mx-auto mb-4 h-8 w-8 text-emerald-600" />
+              <ShieldCheck className="mx-auto mb-4 h-8 w-8 text-pink-500" />
               <h3 className="text-lg font-semibold mb-2">Secure</h3>
               <p className="text-gray-600">Enterprise-grade security with API key authentication</p>
             </div>
@@ -165,7 +165,7 @@ export function ApiSection() {
                 <li>Rate limit: 10 req/min</li>
               </ul>
             </div>
-            <div className="border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow border-emerald-500">
+            <div className="border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow border-pink-500">
               <h3 className="font-semibold mb-2">Pro API</h3>
               <p className="text-xl font-bold mb-4">$99/month</p>
               <ul className="text-gray-600 list-disc list-inside space-y-1">
@@ -203,11 +203,11 @@ export function ApiSection() {
         </div>
 
         {/* Ready to Build */}
-        <div className="max-w-7xl mx-auto text-center bg-gradient-to-r from-slate-700 to-emerald-700 text-white rounded-lg py-12 px-6">
+        <div className="max-w-7xl mx-auto text-center bg-pink-500 text-white rounded-lg py-12 px-6">
           <h2 className="text-3xl font-bold mb-4">Ready to Build?</h2>
           <p className="mb-6">Get started with our API today and build powerful integrations</p>
           <div className="flex justify-center gap-4">
-            <Button variant="default" asChild>
+            <Button variant="hero" asChild>
               <Link to="/api/access">Get API Access</Link>
             </Button>
             <Button variant="outline" asChild>

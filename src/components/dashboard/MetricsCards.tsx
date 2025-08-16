@@ -9,7 +9,7 @@ const metrics = [
     change: "+12%",
     trend: "up",
     icon: MessageSquare,
-    color: "green-outline" // Updated to match button variant
+    color: "text-primary"
   },
   {
     title: "Active Influencers",
@@ -17,7 +17,7 @@ const metrics = [
     change: "+8%",
     trend: "up",
     icon: Users,
-    color: "green-outline" // Updated to match button variant
+    color: "text-accent-bright"
   },
   {
     title: "Campaign ROI",
@@ -25,7 +25,7 @@ const metrics = [
     change: "+23%",
     trend: "up",
     icon: DollarSign,
-    color: "green-outline" // Updated to match button variant
+    color: "text-success"
   },
   {
     title: "Total Reach",
@@ -33,7 +33,7 @@ const metrics = [
     change: "-5%",
     trend: "down",
     icon: Eye,
-    color: "green-outline" // Updated to match button variant
+    color: "text-warning"
   }
 ];
 

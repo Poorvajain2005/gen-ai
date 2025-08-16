@@ -1,20 +1,10 @@
-body {
-    background-color: #000; /* Dark background */
-    color: #fff; /* White text */
+.no-glow {
+  box-shadow: none !important;
+  filter: none !important;
+  text-shadow: none !important;
 }
 
-h1, h2, h3 {
-    font-family: 'YourPreferredFont', sans-serif; /* Update to preferred font */
-}
-
-button {
-    border-radius: 0.375rem; /* Rounded corners for buttons */
-}
-
-.bg-gray-800 {
-    background-color: #1a1a1a; /* Darker gray for sections */
-}
-
-.text-gray-300 {
-    color: #d1d5db; /* Light gray for text */
+/* More specific override for Start Free Trial tab button */
+header nav .rounded-full.px-4.py-2.text-sm.font-semibold.transition-all.duration-200.no-glow {
+  box-shadow: none !important;
 }

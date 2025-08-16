@@ -23,19 +23,21 @@ export function Logo({ className, size = "md", showText = true }: LogoProps) {
 
   return (
     <div className={cn("flex items-center space-x-3", className)}>
-      {/* Logo Image */}
+      {/* New Image Logo */}
       <div className={cn("relative", sizeClasses[size])}>
         <img
-          src="/assets/logo-gg-handshake.jpg" // make sure it's saved in public/assets
+          src="/assets/logo-gg-handshake.jpg" // <-- updated to new logo image with .jpg extension in public/assets
           alt="Gen Goodwill.ai Logo"
           className="w-full h-full object-contain"
         />
       </div>
 
-      {/* Logo Text */}
+      {/* Optional Text */}
       {showText && (
         <div className={cn("font-bold", textSizes[size])}>
-          <span className="text-[#064e3b]">Gen Goodwill.ai</span>
+          <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+            Gen Goodwill.ai
+          </span>
         </div>
       )}
     </div>
