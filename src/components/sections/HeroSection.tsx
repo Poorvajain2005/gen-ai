@@ -130,45 +130,45 @@ export function HeroSection() {
               Explore Our Services
             </h2>
 
-            <div className="inline-flex flex-wrap justify-center gap-1 p-3 bg-black rounded-xl">
+            <div className="inline-flex flex-wrap justify-center gap-2 p-4 bg-gray-800 rounded-xl border border-gray-600">
               <Link
                 to="/"
-                className="px-6 py-3 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors"
+                className="px-6 py-3 text-white bg-gray-700 rounded-lg font-medium hover:bg-green-600 transition-colors border border-gray-600"
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Gen Goodwill.ai
               </Link>
               <Link
                 to="/customers"
-                className="px-6 py-3 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors"
+                className="px-6 py-3 text-white bg-gray-700 rounded-lg font-medium hover:bg-green-600 transition-colors border border-gray-600"
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Customers
               </Link>
               <Link
                 to="/api"
-                className="px-6 py-3 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors"
+                className="px-6 py-3 text-white bg-gray-700 rounded-lg font-medium hover:bg-green-600 transition-colors border border-gray-600"
                 onClick={() => window.scrollTo(0, 0)}
               >
                 API
               </Link>
               <Link
                 to="/login"
-                className="px-6 py-3 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors"
+                className="px-6 py-3 text-white bg-gray-700 rounded-lg font-medium hover:bg-green-600 transition-colors border border-gray-600"
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Log in
               </Link>
               <Link
                 to="/demo"
-                className="px-6 py-3 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors"
+                className="px-6 py-3 text-white bg-gray-700 rounded-lg font-medium hover:bg-green-600 transition-colors border border-gray-600"
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Get a demo
               </Link>
               <Link
                 to="/signup"
-                className="px-6 py-3 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors"
+                className="px-6 py-3 text-white bg-gray-700 rounded-lg font-medium hover:bg-green-600 transition-colors border border-gray-600"
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Try for Free

@@ -182,18 +182,18 @@ const CaseStudies = () => {
         ))}
       </section>
 
-      <section className="mt-16 bg-blue-50 rounded-lg p-8">
+      <section className="mt-16 bg-gray-700 rounded-lg p-8 text-white">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Create Your Success Story?</h2>
-          <p className="text-gray-600 mb-6">
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Create Your Success Story?</h2>
+          <p className="text-gray-300 mb-6">
             Join thousands of brands achieving remarkable results with our influencer marketing platform. 
             Get started today with a personalized strategy session.
           </p>
           <div className="flex justify-center gap-4">
-            <Link to="/demo" className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">
+            <Link to="/demo" className="bg-white text-gray-700 px-6 py-3 rounded-md hover:bg-gray-100 transition">
               Book a Demo
             </Link>
-            <Link to="/signup" className="bg-white text-blue-600 border border-blue-600 px-6 py-3 rounded-md hover:bg-blue-50 transition">
+            <Link to="/signup" className="border border-white text-white px-6 py-3 rounded-md hover:bg-white hover:text-gray-700 transition">
               Start Free Trial
             </Link>
           </div>

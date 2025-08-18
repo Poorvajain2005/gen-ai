@@ -133,7 +133,7 @@ const Analytics = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+    <main className="min-h-screen bg-gradient-to-br from-gray-50 to-slate-100">
       <Header />
       <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <section className="text-center max-w-4xl mx-auto">
@@ -143,16 +143,16 @@ const Analytics = () => {
             real-time insights, and comprehensive reporting tools.
           </p>
           
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white mb-12">
+          <div className="bg-gray-700 rounded-2xl p-8 text-white mb-12">
             <h3 className="text-2xl font-bold mb-4">📊 Analytics Demo</h3>
-            <p className="text-blue-100 mb-6">
+            <p className="text-gray-300 mb-6">
               See how our advanced analytics can transform your campaign insights and ROI.
             </p>
             <div className="flex justify-center gap-4">
-              <Link to="/demo" className="bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
+              <Link to="/demo" className="bg-white text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
                 Book Analytics Demo
               </Link>
-              <Link to="/signup" className="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition">
+              <Link to="/signup" className="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-gray-700 transition">
                 Start Free Trial
               </Link>
             </div>
@@ -195,8 +195,8 @@ const Analytics = () => {
               <div key={index} className="bg-white rounded-lg shadow-md p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{metric.name}</h3>
                 <p className="text-gray-600 mb-3">{metric.description}</p>
-                <div className="bg-blue-50 rounded-lg p-3">
-                  <p className="text-sm text-blue-800">
+                <div className="bg-gray-50 rounded-lg p-3">
+                  <p className="text-sm text-gray-800">
                     <span className="font-semibold">Benchmark:</span> {metric.benchmark}
                   </p>
                 </div>
@@ -228,16 +228,16 @@ const Analytics = () => {
           </div>
         </section>
 
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
+        <section className="bg-gray-700 rounded-2xl p-8 text-white text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Analytics?</h2>
-          <p className="text-xl text-blue-100 mb-8">
+          <p className="text-xl text-gray-300 mb-8">
             Join thousands of brands using our advanced analytics to scale their influencer marketing
           </p>
           <div className="flex justify-center gap-4">
-            <Link to="/demo" className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
+            <Link to="/demo" className="bg-white text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
               Schedule Demo
             </Link>
-            <Link to="/signup" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition">
+            <Link to="/signup" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-700 transition">
               Start Free Trial
             </Link>
           </div>

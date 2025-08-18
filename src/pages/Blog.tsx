@@ -105,10 +105,10 @@ const Blog = () => {
         ))}
       </section>
 
-      <section className="mt-16 bg-blue-50 rounded-lg p-8">
+      <section className="mt-16 bg-gray-700 rounded-lg p-8 text-white">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Subscribe to Our Newsletter</h2>
-          <p className="text-gray-600 mb-6">
+          <h2 className="text-3xl font-bold text-white mb-4">Subscribe to Our Newsletter</h2>
+          <p className="text-gray-300 mb-6">
             Get weekly insights, case studies, and industry updates delivered to your inbox. 
             Join 50,000+ marketers from leading brands and agencies.
           </p>
@@ -118,7 +118,7 @@ const Blog = () => {
               placeholder="Enter your email"
               className="flex-1 px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <button className="px-6 py-2 bg-blue-600 text-white rounded-r-md hover:bg-blue-700 transition">
+            <button className="px-6 py-2 bg-white text-gray-700 rounded-r-md hover:bg-gray-100 transition">
               Subscribe
             </button>
           </div>
@@ -126,7 +126,7 @@ const Blog = () => {
       </section>
 
       <section className="mt-12 text-center">
-        <Link to="/blog" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">
+        <Link to="/blog" className="inline-block bg-gray-700 text-white px-6 py-3 rounded-md hover:bg-gray-800 transition">
           View All Blog Posts
         </Link>
       </section>

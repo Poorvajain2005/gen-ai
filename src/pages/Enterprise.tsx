@@ -77,7 +77,7 @@ const Enterprise = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200">
+    <main className="min-h-screen bg-gradient-to-br from-gray-50 to-slate-100">
       <Header />
       <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <section className="text-center max-w-4xl mx-auto">
@@ -86,7 +86,7 @@ const Enterprise = () => {
           Empower your global marketing teams with enterprise-grade influencer marketing solutions that scale securely and compliantly.
         </p>
         
-        <div className="bg-gradient-to-r from-gray-700 to-gray-900 rounded-2xl p-8 text-white mb-12">
+        <div className="bg-gray-700 rounded-2xl p-8 text-white mb-12">
           <h3 className="text-2xl font-bold mb-4">🏢 Enterprise Demo</h3>
           <p className="text-gray-300 mb-6">
             Discover how enterprises manage global influencer campaigns with security and compliance.
@@ -120,7 +120,7 @@ const Enterprise = () => {
         ))}
       </section>
 
-      <section className="bg-gradient-to-r from-gray-700 to-gray-900 rounded-2xl p-8 text-white">
+      <section className="bg-gray-700 rounded-2xl p-8 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Empower Your Enterprise?</h2>
           <p className="text-gray-300 mb-6">

@@ -137,7 +137,7 @@ const Campaigns = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-gradient-to-br from-gray-50 to-slate-100">
       <Header />
       <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <section className="text-center max-w-4xl mx-auto">
@@ -147,12 +147,12 @@ const Campaigns = () => {
             Manage hundreds of campaigns simultaneously with automated workflows, real-time tracking, and team collaboration tools.
           </p>
           
-          <div className="bg-blue-50 rounded-lg p-6 mb-8">
+          <div className="bg-gray-50 rounded-lg p-6 mb-8">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">🎯 Campaign Demo</h3>
             <p className="text-gray-600 mb-4">
               See how easy it is to manage complex influencer campaigns with our interactive demo.
             </p>
-            <Link to="/demo" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">
+            <Link to="/demo" className="inline-block bg-gray-400 text-white px-6 py-3 rounded-md hover:bg-gray-500 transition">
               Book Campaign Demo
             </Link>
           </div>
@@ -168,7 +168,7 @@ const Campaigns = () => {
             <ul className="text-sm text-gray-600 space-y-1">
               {feature.details.map((detail, idx) => (
                 <li key={idx} className="flex items-start">
-                  <span className="text-blue-500 mr-2">•</span>
+                  <span className="text-gray-500 mr-2">•</span>
                   {detail}
                 </li>
               ))}
@@ -206,7 +206,7 @@ const Campaigns = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {workflowSteps.map((step, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md relative">
-              <div className="absolute -top-3 -left-3 bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">
+              <div className="absolute -top-3 -left-3 bg-gray-400 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">
                 {step.step}
               </div>
               <h3 className="text-lg font-semibold mb-2 text-gray-900 mt-4">{step.title}</h3>
@@ -216,22 +216,22 @@ const Campaigns = () => {
         </div>
       </section>
 
-      <section className="mt-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 text-white">
+      <section className="mt-16 bg-gray-700 rounded-lg p-8 text-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Scale Your Campaigns?</h2>
-          <p className="text-purple-100 mb-6">
+          <p className="text-gray-300 mb-6">
             Join 5,000+ brands and agencies managing successful influencer campaigns with our platform. 
             From single campaigns to global initiatives, we've got you covered.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/demo" className="bg-white text-purple-600 px-6 py-3 rounded-md hover:bg-gray-100 transition font-semibold">
+            <Link to="/demo" className="bg-white text-gray-700 px-6 py-3 rounded-md hover:bg-gray-100 transition font-semibold">
               Book Campaign Demo
             </Link>
-            <Link to="/signup" className="border border-white text-white px-6 py-3 rounded-md hover:bg-white hover:text-purple-600 transition">
+            <Link to="/signup" className="border border-white text-white px-6 py-3 rounded-md hover:bg-white hover:text-gray-700 transition">
               Start Free Trial
             </Link>
           </div>
-          <p className="text-purple-100 text-sm mt-4">
+          <p className="text-gray-300 text-sm mt-4">
             14-day free trial • No credit card required • Manage unlimited campaigns
           </p>
         </div>

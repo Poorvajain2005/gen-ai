@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Header } from "@/components/layout/Header";
 
 const Help = () => {
   useEffect(() => {
@@ -126,14 +127,16 @@ const Help = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-slate-100">
+      <Header />
+      <main className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <section className="text-center max-w-4xl mx-auto">
         <h1 className="text-5xl font-bold text-gray-900 mb-6">Help & Support Center</h1>
         <p className="text-xl text-gray-600 mb-12">
           Get the help you need with comprehensive documentation, tutorials, and expert support.
         </p>
         
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white mb-12">
+        <div className="bg-gray-700 rounded-2xl p-8 text-white mb-12">
           <h3 className="text-2xl font-bold mb-4">💬 Need Help?</h3>
           <p className="text-blue-100 mb-6">
             Our support team is available 24/7 to help you succeed.
@@ -198,7 +201,7 @@ const Help = () => {
         </div>
       </section>
 
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+      <section className="bg-gray-700 rounded-2xl p-8 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Still Need Help?</h2>
           <p className="text-blue-100 mb-6">
@@ -217,7 +220,8 @@ const Help = () => {
           </p>
         </div>
       </section>
-    </main>
+      </main>
+    </div>
   );
 };
 

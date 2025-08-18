@@ -121,7 +121,7 @@ const Ecommerce = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50">
+    <main className="min-h-screen bg-gradient-to-br from-gray-50 to-slate-100">
       <Header />
       <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"> </div>
         <section className="text-center max-w-4xl mx-auto">
@@ -130,16 +130,16 @@ const Ecommerce = () => {
           Drive sales, build brand loyalty, and scale your ecommerce business with data-driven influencer campaigns.
         </p>
         
-        <div className="bg-gradient-to-r from-pink-600 to-purple-600 rounded-2xl p-8 text-white mb-12">
+        <div className="bg-gray-700 rounded-2xl p-8 text-white mb-12">
           <h3 className="text-2xl font-bold mb-4">🛍️ Ecommerce Demo</h3>
-          <p className="text-pink-100 mb-6">
+          <p className="text-emerald-100 mb-6">
             See how top ecommerce brands use our platform to drive 4x+ ROAS.
           </p>
           <div className="flex justify-center gap-4">
-            <Link to="/demo" className="bg-white text-pink-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
+            <Link to="/demo" className="bg-white text-emerald-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
               Book Ecommerce Demo
             </Link>
-            <Link to="/signup" className="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-pink-600 transition">
+            <Link to="/signup" className="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition">
               Start Free Trial
             </Link>
           </div>
@@ -155,7 +155,7 @@ const Ecommerce = () => {
             <ul className="text-sm text-gray-600 space-y-1">
               {strategy.details.map((detail, idx) => (
                 <li key={idx} className="flex items-start">
-                  <span className="text-pink-500 mr-2">•</span>
+                  <span className="text-emerald-500 mr-2">•</span>
                   {detail}
                 </li>
               ))}
@@ -169,7 +169,7 @@ const Ecommerce = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {successMetrics.map((metric, index) => (
             <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center">
-              <h3 className="text-3xl font-bold text-pink-600 mb-2">{metric.value}</h3>
+              <h3 className="text-3xl font-bold text-emerald-600 mb-2">{metric.value}</h3>
               <h4 className="text-lg font-semibold mb-2 text-gray-900">{metric.metric}</h4>
               <p className="text-sm text-gray-600">{metric.description}</p>
             </div>
@@ -202,21 +202,21 @@ const Ecommerce = () => {
         </div>
       </section>
 
-      <section className="bg-gradient-to-r from-pink-600 to-purple-600 rounded-2xl p-8 text-white">
+      <section className="bg-gray-700 rounded-2xl p-8 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Scale Your Ecommerce Sales?</h2>
-          <p className="text-pink-100 mb-6">
+          <p className="text-emerald-100 mb-6">
             Join 5,000+ ecommerce brands driving millions in sales through influencer marketing.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/demo" className="bg-white text-pink-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
+            <Link to="/demo" className="bg-white text-emerald-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
               Book Ecommerce Demo
             </Link>
-            <Link to="/signup" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-pink-600 transition">
+            <Link to="/signup" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-emerald-600 transition">
               Start Free Trial
             </Link>
           </div>
-          <p className="text-pink-100 text-sm mt-4">
+          <p className="text-emerald-100 text-sm mt-4">
             14-day free trial • No credit card required • 4x average ROAS
           </p>
         </div>

@@ -123,7 +123,7 @@ const Payments = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-indigo-50">
+    <main className="min-h-screen bg-gradient-to-br from-gray-50 to-slate-100">
       <Header />
       <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <section className="text-center max-w-4xl mx-auto">
@@ -133,16 +133,16 @@ const Payments = () => {
             automated payouts, and comprehensive compliance features.
           </p>
           
-          <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white mb-12">
+          <div className="bg-gray-700 rounded-2xl p-8 text-white mb-12">
             <h3 className="text-2xl font-bold mb-4">💳 Payment Demo</h3>
-            <p className="text-green-100 mb-6">
+            <p className="text-gray-300 mb-6">
               See how easy it is to process payments globally with our secure payment system.
             </p>
             <div className="flex justify-center gap-4">
-              <Link to="/demo" className="bg-white text-green-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
+              <Link to="/demo" className="bg-white text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
                 Book Payment Demo
               </Link>
-              <Link to="/signup" className="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-green-600 transition">
+              <Link to="/signup" className="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-gray-700 transition">
                 Start Free Trial
               </Link>
             </div>
@@ -164,7 +164,7 @@ const Payments = () => {
                 <ul className="space-y-2">
                   {feature.details.map((detail, idx) => (
                     <li key={idx} className="flex items-start">
-                      <span className="text-green-500 mr-2">•</span>
+                      <span className="text-gray-500 mr-2">•</span>
                       <span className="text-gray-600 text-sm">{detail}</span>
                     </li>
                   ))}
@@ -214,20 +214,20 @@ const Payments = () => {
           </div>
         </section>
 
-        <section className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white text-center">
+        <section className="bg-gray-700 rounded-2xl p-8 text-white text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Streamline Your Payments?</h2>
-          <p className="text-xl text-green-100 mb-8">
+          <p className="text-xl text-gray-300 mb-8">
             Join 10,000+ brands processing millions in influencer payments securely and efficiently.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/demo" className="bg-white text-green-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
+            <Link to="/demo" className="bg-white text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
               Book Payment Demo
             </Link>
-            <Link to="/signup" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-green-600 transition">
+            <Link to="/signup" className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-700 transition">
               Start Free Trial
             </Link>
           </div>
-          <p className="text-green-100 text-sm mt-4">
+          <p className="text-gray-300 text-sm mt-4">
             14-day free trial • No credit card required • 135+ currencies supported
           </p>
         </section>
