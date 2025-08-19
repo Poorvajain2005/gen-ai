@@ -76,36 +76,16 @@ export function HeroSection() {
                 transform: "translateX(25%)",
               }}
             >
-              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
-                Shopify
-              </div>
-              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
-                Amazon
-              </div>
-              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
-                Nike
-              </div>
-              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
-                Adidas
-              </div>
-              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
-                Samsung
-              </div>
-              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
-                Apple
-              </div>
-              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
-                Shopify
-              </div>
-              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
-                Amazon
-              </div>
-              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
-                Nike
-              </div>
-              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
-                Adidas
-              </div>
+              <img src="https://logos-world.net/wp-content/uploads/2020/11/Shopify-Logo.png" alt="Shopify" className="h-16 w-auto grayscale opacity-60" />
+              <img src="https://logos-world.net/wp-content/uploads/2020/04/Amazon-Logo.png" alt="Amazon" className="h-16 w-auto grayscale opacity-60" />
+              <img src="https://logos-world.net/wp-content/uploads/2020/04/Nike-Logo.png" alt="Nike" className="h-16 w-auto grayscale opacity-60" />
+              <img src="https://logos-world.net/wp-content/uploads/2020/04/Adidas-Logo.png" alt="Adidas" className="h-16 w-auto grayscale opacity-60" />
+              <img src="https://logos-world.net/wp-content/uploads/2020/04/Samsung-Logo.png" alt="Samsung" className="h-16 w-auto grayscale opacity-60" />
+              <img src="https://logos-world.net/wp-content/uploads/2020/04/Apple-Logo.png" alt="Apple" className="h-16 w-auto grayscale opacity-60" />
+              <img src="https://logos-world.net/wp-content/uploads/2020/11/Shopify-Logo.png" alt="Shopify" className="h-16 w-auto grayscale opacity-60" />
+              <img src="https://logos-world.net/wp-content/uploads/2020/04/Amazon-Logo.png" alt="Amazon" className="h-16 w-auto grayscale opacity-60" />
+              <img src="https://logos-world.net/wp-content/uploads/2020/04/Nike-Logo.png" alt="Nike" className="h-16 w-auto grayscale opacity-60" />
+              <img src="https://logos-world.net/wp-content/uploads/2020/04/Adidas-Logo.png" alt="Adidas" className="h-16 w-auto grayscale opacity-60" />
             </div>
           </div>
 
