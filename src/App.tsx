@@ -43,6 +43,7 @@ import Inbox from "./pages/Inbox";
 import ShopifyIntegration from "./pages/ShopifyIntegration";
 import CampaignMonitoring from "./pages/CampaignMonitoring";
 import Resources from "./pages/Resources";
+import Newsletter from "./pages/Newsletter";
 import Certification from "./pages/Certification";
 import WebinarRegistration from "./pages/WebinarRegistration";
 import Product from "./pages/Product";
@@ -95,6 +96,7 @@ const App = () => (
               <Route path="/agencies" element={<Agencies />} />
               <Route path="/enterprise" element={<Enterprise />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/newsletter" element={<Newsletter />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/webinars" element={<Webinars />} />
               <Route path="/webinars/register" element={<WebinarRegistration />} />

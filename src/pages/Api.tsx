@@ -6,7 +6,9 @@ const Api = () => {
   return (
     <main className="min-h-screen bg-gray-50">
       <Header />
-      <ApiSection />
+      <div className="mt-20">
+        <ApiSection />
+      </div>
     </main>
   );
 };

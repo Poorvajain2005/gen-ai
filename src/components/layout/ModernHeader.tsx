@@ -72,30 +72,28 @@ const navigation = [
     ],
   },
   {
-    name: "Resources",
+    name: " Resources",
     href: "/resources",
     description: "Guides & best practices",
     icon: BookOpen,
     features: [
       {
-        name: "Blog",
-        description: "Latest insights and strategies",
+        name: "📝 Blog",
+        description:
+          "Long-form written content on B2C influencer programs including original research, how-tos and more",
         href: "/blog",
       },
       {
-        name: "Case Studies",
-        description: "Success stories from top brands",
-        href: "/case-studies",
+        name: "📧 Newsletter",
+        description:
+          "Subscribe for short, regular, thought provoking emails on influencer marketing topics. Written by Eleni Zoe",
+        href: "/newsletter",
       },
       {
-        name: "Webinars",
-        description: "Live sessions with experts",
+        name: "🎥 Webinars",
+        description:
+          "Live & on-demand webinars with influencer marketing pros. Join the discussion and learn new strategies for your program",
         href: "/webinars",
-      },
-      {
-        name: "Help Center",
-        description: "Documentation and support",
-        href: "/help",
       },
     ],
   },
@@ -112,6 +110,7 @@ const ctaButtons = [
   { name: "Log in", href: "/login", variant: "outline" as const },
   { name: "Start Free Trial", href: "/signup", variant: "default" as const },
   { name: "Schedule Demo", href: "/demo", variant: "outline" as const },
+  { name: "Pricing", href: "/pricing", variant: "ghost" },
 ];
 
 export function ModernHeader() {
@@ -128,12 +127,10 @@ export function ModernHeader() {
   }, []);
 
   // Conditionally render header only on landing page(s)
-  // Also render on /pricing to highlight Pricing tab
-  // Exclude dashboard pages
+  // Exclude dashboard pages and pricing page
   if (
     location.pathname !== "/" &&
     location.pathname !== "/modernlanding" &&
-    location.pathname !== "/pricing" &&
     !location.pathname.startsWith("/dashboard")
   ) {
     return null;
@@ -152,44 +149,76 @@ export function ModernHeader() {
       )}
     >
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:p-6"
+        className="flex items-center justify-between p-4 lg:p-6"
         aria-label="Global"
       >
-        <div className="flex lg:flex-1">
-          <Link to="/" className="-m-1.5 p-1.5">
-            <Logo size="md" />
+        <div className="flex-shrink-0">
+          <Link to="/" className="p-0">
+            <Logo size="lg" />
           </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex lg:gap-x-6">
+        <div className="hidden lg:flex lg:gap-x-6 lg:items-center lg:ml-12">
           <NavigationMenu>
             <NavigationMenuList className="space-x-2">
               {navigation.map((item) => (
                 <NavigationMenuItem key={item.name}>
                   {item.features ? (
                     <>
-                      <NavigationMenuTrigger className="text-sm font-medium px-3 py-2">
+                      <NavigationMenuTrigger className="text-base font-medium px-4 py-3">
                         {item.name}
+                        <span className="ml-2 text-xs transition-transform duration-300 group-data-[state=open]:rotate-180">
+                          ▼
+                        </span>
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
-                        <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                          {item.features.map((feature) => (
-                            <NavigationMenuLink asChild key={feature.name}>
-                              <Link
-                                to={feature.href}
-                                className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-100 focus:bg-gray-100"
-                              >
-                                <div className="text-sm font-medium leading-none text-gray-900">
-                                  {feature.name}
-                                </div>
-                                <p className="line-clamp-2 text-sm leading-snug text-gray-600">
-                                  {feature.description}
-                                </p>
-                              </Link>
-                            </NavigationMenuLink>
-                          ))}
-                        </div>
+                        {item.name.includes("Resources") ? (
+                          <div className="flex w-[650px] p-6">
+                            <div className="flex-1 space-y-3">
+                              {item.features.map((feature) => (
+                                <NavigationMenuLink asChild key={feature.name}>
+                                  <Link
+                                    to={feature.href}
+                                    className="block select-none space-y-2 rounded-md p-4 leading-none no-underline outline-none transition-colors hover:bg-gray-100 focus:bg-gray-100"
+                                  >
+                                    <div className="text-base font-medium leading-none text-gray-900">
+                                      {feature.name}
+                                    </div>
+                                    <p className="text-sm leading-relaxed text-gray-600">
+                                      {feature.description}
+                                    </p>
+                                  </Link>
+                                </NavigationMenuLink>
+                              ))}
+                            </div>
+                            <div className="w-48 ml-6">
+                              <img
+                                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=300&h=400&fit=crop&crop=center"
+                                alt="Resources"
+                                className="w-full h-full rounded-xl object-cover shadow-lg min-h-[280px]"
+                              />
+                            </div>
+                          </div>
+                        ) : (
+                          <div className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                            {item.features.map((feature) => (
+                              <NavigationMenuLink asChild key={feature.name}>
+                                <Link
+                                  to={feature.href}
+                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-100 focus:bg-gray-100"
+                                >
+                                  <div className="text-sm font-medium leading-none text-gray-900">
+                                    {feature.name}
+                                  </div>
+                                  <p className="line-clamp-2 text-sm leading-snug text-gray-600">
+                                    {feature.description}
+                                  </p>
+                                </Link>
+                              </NavigationMenuLink>
+                            ))}
+                          </div>
+                        )}
                       </NavigationMenuContent>
                     </>
                   ) : (
@@ -197,7 +226,7 @@ export function ModernHeader() {
                       <Link
                         to={item.href}
                         className={cn(
-                          "text-sm font-medium transition-colors duration-200 px-3 py-2 rounded-md hover:bg-gray-50",
+                          "text-base font-medium transition-colors duration-200 px-4 py-3 rounded-md hover:bg-gray-50",
                           location.pathname === item.href ||
                             (item.name === "Pricing" &&
                               location.pathname === "/pricing")
@@ -218,19 +247,13 @@ export function ModernHeader() {
         {/* Desktop CTA Buttons */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
           {ctaButtons.map((button) => (
-            <Button
+            <Link
               key={button.name}
-              variant={button.variant}
-              size="sm"
-              asChild
-              className={cn(
-                "transition-all duration-200 px-4",
-                button.variant === "default" && "bg-green-600 hover:bg-green-700",
-                button.variant === "outline" && "border-green-600 text-green-600 hover:bg-green-600 hover:text-white"
-              )}
+              to={button.href}
+              className="text-base font-medium transition-colors duration-200 px-4 py-3 rounded-md text-green-600 bg-green-50 hover:bg-green-100"
             >
-              <Link to={button.href}>{button.name}</Link>
-            </Button>
+              {button.name}
+            </Link>
           ))}
         </div>
 

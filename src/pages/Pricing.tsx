@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
+import { Header } from "@/components/layout/Header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -133,8 +134,9 @@ export default function Pricing() {
 
   return (
     <>
-      <div className="bg-background min-h-screen overflow-y-auto">
-        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
+      <Header />
+      <div className="bg-background min-h-screen overflow-y-auto mt-16">
+        <div className="mx-auto max-w-7xl px-6 py-8 sm:py-12 lg:px-8">
           {/* Header */}
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="text-base font-semibold leading-7 text-primary">Pricing</h2>
@@ -254,4 +256,4 @@ export default function Pricing() {
       </div>
     </>
   );
-}
+} 
