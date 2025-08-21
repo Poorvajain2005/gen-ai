@@ -6,7 +6,10 @@ import { Link } from "react-router-dom";
 export function HeroSection() {
   return (
     <>
-      <div className="relative overflow-hidden bg-gray-800 text-white mx-4 sm:mx-8 md:mx-12 lg:mx-16 my-8 sm:my-12 md:my-16 rounded-3xl min-h-[45vh] py-12 sm:py-16">
+      <div
+        className="relative overflow-hidden
+       text-white mx-4 sm:mx-8 md:mx-12 lg:mx-16 my-8 sm:my-12 md:my-16 rounded-3xl min-h-[45vh] py-12 sm:py-16"
+      >
         <div className="relative mx-auto max-w-7xl px-6 text-center">
           {/* Badge */}
           <div className="inline-flex items-center rounded-full bg-green-900/40 border border-green-700 px-3 py-1 text-sm font-semibold text-green-300 mb-6 shadow-md">
@@ -76,16 +79,36 @@ export function HeroSection() {
                 transform: "translateX(25%)",
               }}
             >
-              <img src="https://logos-world.net/wp-content/uploads/2020/11/Shopify-Logo.png" alt="Shopify" className="h-16 w-auto grayscale opacity-60" />
-              <img src="https://logos-world.net/wp-content/uploads/2020/04/Amazon-Logo.png" alt="Amazon" className="h-16 w-auto grayscale opacity-60" />
-              <img src="https://logos-world.net/wp-content/uploads/2020/04/Nike-Logo.png" alt="Nike" className="h-16 w-auto grayscale opacity-60" />
-              <img src="https://logos-world.net/wp-content/uploads/2020/04/Adidas-Logo.png" alt="Adidas" className="h-16 w-auto grayscale opacity-60" />
-              <img src="https://logos-world.net/wp-content/uploads/2020/04/Samsung-Logo.png" alt="Samsung" className="h-16 w-auto grayscale opacity-60" />
-              <img src="https://logos-world.net/wp-content/uploads/2020/04/Apple-Logo.png" alt="Apple" className="h-16 w-auto grayscale opacity-60" />
-              <img src="https://logos-world.net/wp-content/uploads/2020/11/Shopify-Logo.png" alt="Shopify" className="h-16 w-auto grayscale opacity-60" />
-              <img src="https://logos-world.net/wp-content/uploads/2020/04/Amazon-Logo.png" alt="Amazon" className="h-16 w-auto grayscale opacity-60" />
-              <img src="https://logos-world.net/wp-content/uploads/2020/04/Nike-Logo.png" alt="Nike" className="h-16 w-auto grayscale opacity-60" />
-              <img src="https://logos-world.net/wp-content/uploads/2020/04/Adidas-Logo.png" alt="Adidas" className="h-16 w-auto grayscale opacity-60" />
+              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
+                Shopify
+              </div>
+              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
+                Amazon
+              </div>
+              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
+                Nike
+              </div>
+              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
+                Adidas
+              </div>
+              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
+                Samsung
+              </div>
+              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
+                Apple
+              </div>
+              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
+                Shopify
+              </div>
+              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
+                Amazon
+              </div>
+              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
+                Nike
+              </div>
+              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
+                Adidas
+              </div>
             </div>
           </div>
 
@@ -165,11 +188,10 @@ export function HeroSection() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Customer Success Stories
             </h2>
-            <p className="text-xl text-gray-600 mb-2">
-              Loved by 1,500+ brands
-            </p>
+            <p className="text-xl text-gray-600 mb-2">Loved by 1,500+ brands</p>
             <p className="text-lg text-gray-500">
-              See how leading companies are transforming their influencer marketing with our platform.
+              See how leading companies are transforming their influencer
+              marketing with our platform.
             </p>
           </div>
 
@@ -177,15 +199,21 @@ export function HeroSection() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="text-center bg-white rounded-xl p-8 shadow-lg border border-green-200">
               <div className="text-4xl font-bold text-green-600 mb-2">98%</div>
-              <div className="text-gray-700 font-medium">Customer Satisfaction</div>
+              <div className="text-gray-700 font-medium">
+                Customer Satisfaction
+              </div>
             </div>
             <div className="text-center bg-white rounded-xl p-8 shadow-lg border border-green-200">
               <div className="text-4xl font-bold text-green-600 mb-2">3.2x</div>
-              <div className="text-gray-700 font-medium">Average ROI Increase</div>
+              <div className="text-gray-700 font-medium">
+                Average ROI Increase
+              </div>
             </div>
             <div className="text-center bg-white rounded-xl p-8 shadow-lg border border-green-200">
               <div className="text-4xl font-bold text-green-600 mb-2">85%</div>
-              <div className="text-gray-700 font-medium">Faster Campaign Setup</div>
+              <div className="text-gray-700 font-medium">
+                Faster Campaign Setup
+              </div>
             </div>
           </div>
 
