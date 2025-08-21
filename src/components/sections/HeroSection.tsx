@@ -6,19 +6,10 @@ import { Link } from "react-router-dom";
 export function HeroSection() {
   return (
     <>
-      <div
-        className="relative overflow-hidden
-       text-white mx-4 sm:mx-8 md:mx-12 lg:mx-16 my-8 sm:my-12 md:my-16 rounded-3xl min-h-[45vh] py-12 sm:py-16"
-      >
+      <div className="relative overflow-hidden bg-gray-800 text-white mx-2 sm:mx-4 md:mx-6 lg:mx-8 mt-8 mb-8 sm:mb-12 md:mb-16 rounded-3xl min-h-screen py-24 sm:py-32 lg:py-40 pb-32 sm:pb-40 lg:pb-48">
         <div className="relative mx-auto max-w-7xl px-6 text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center rounded-full bg-green-900/40 border border-green-700 px-3 py-1 text-sm font-semibold text-green-300 mb-6 shadow-md">
-            <Star className="mr-1 h-4 w-4 text-green-400" />
-            4.9&nbsp;Shopify
-          </div>
-
           {/* Main heading */}
-          <h1 className="text-5xl font-extrabold uppercase tracking-tight sm:text-6xl">
+          <h1 className="mt-12 text-8xl font-extrabold uppercase tracking-tight sm:text-8xl">
             POWER YOUR SHOPIFY STORE WITH FULL-SERVICE INFLUENCER MARKETING
           </h1>
 
@@ -41,7 +32,7 @@ export function HeroSection() {
             <Button
               variant="outline"
               size="lg"
-              className="bg-green-500 text-white"
+              className="bg-green-300 text-white"
               asChild
             >
               <Link to="/demo">Get a Demo</Link>
@@ -54,11 +45,11 @@ export function HeroSection() {
         </p>
 
         {/* Marketing Image */}
-        <div className="mt-8 px-6">
+        <div className="mt-20 px-2 sm:px-4 lg:px-8">
           <img
             src="/assets/landing-page.png"
             alt="Gen Goodwill.ai Platform"
-            className="w-full max-w-4xl mx-auto rounded-lg shadow-lg"
+            className="w-full max-w-none mx-auto rounded-3xl shadow-2xl border border-gray-600"
           />
         </div>
       </div>
@@ -79,36 +70,56 @@ export function HeroSection() {
                 transform: "translateX(25%)",
               }}
             >
-              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
-                Shopify
-              </div>
-              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
-                Amazon
-              </div>
-              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
-                Nike
-              </div>
-              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
-                Adidas
-              </div>
-              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
-                Samsung
-              </div>
-              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
-                Apple
-              </div>
-              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
-                Shopify
-              </div>
-              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
-                Amazon
-              </div>
-              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
-                Nike
-              </div>
-              <div className="text-gray-400 font-semibold text-lg whitespace-nowrap">
-                Adidas
-              </div>
+              <img
+                src="https://logos-world.net/wp-content/uploads/2020/11/Shopify-Logo.png"
+                alt="Shopify"
+                className="h-16 w-auto grayscale opacity-60"
+              />
+              <img
+                src="https://logos-world.net/wp-content/uploads/2020/04/Amazon-Logo.png"
+                alt="Amazon"
+                className="h-16 w-auto grayscale opacity-60"
+              />
+              <img
+                src="https://logos-world.net/wp-content/uploads/2020/04/Nike-Logo.png"
+                alt="Nike"
+                className="h-16 w-auto grayscale opacity-60"
+              />
+              <img
+                src="https://logos-world.net/wp-content/uploads/2020/04/Adidas-Logo.png"
+                alt="Adidas"
+                className="h-16 w-auto grayscale opacity-60"
+              />
+              <img
+                src="https://logos-world.net/wp-content/uploads/2020/04/Samsung-Logo.png"
+                alt="Samsung"
+                className="h-16 w-auto grayscale opacity-60"
+              />
+              <img
+                src="https://logos-world.net/wp-content/uploads/2020/04/Apple-Logo.png"
+                alt="Apple"
+                className="h-16 w-auto grayscale opacity-60"
+              />
+              <img
+                src="https://logos-world.net/wp-content/uploads/2020/11/Shopify-Logo.png"
+                alt="Shopify"
+                className="h-16 w-auto grayscale opacity-60"
+              />
+              <img
+                src="https://logos-world.net/wp-content/uploads/2020/04/Amazon-Logo.png"
+                alt="Amazon"
+                className="h-16 w-auto grayscale opacity-60"
+              />
+              <img
+                src="https://logos-world.net/wp-content/uploads/2020/04/Nike-Logo.png"
+                alt="Nike"
+                className="h-16 w-auto grayscale opacity-60"
+              />
+              <img
+                src="https://logos-world.net/wp-content/uploads/2020/04/Adidas-Logo.png"
+                alt="Adidas"
+                className="h-16 w-auto grayscale opacity-60"
+              />
             </div>
           </div>
 
@@ -126,10 +137,10 @@ export function HeroSection() {
       </div>
 
       {/* Explore Services Section */}
-      <div className="py-16 bg-white">
+      <div className="py-48 bg-white">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center space-y-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+          <div className="text-center space-y-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
               Explore Our Services
             </h2>
 
